@@ -1,0 +1,150 @@
+{ "error": {}, 
+  "data": [
+  {
+    "id": 411988,
+    "name": "tb data 5",
+    "isEngage": false,
+    "isExpired": true,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 248259,
+    "name": "tb-data4",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 293740,
+    "name": "Expired account",
+    "isEngage": false,
+    "isExpired": true,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 722237,
+    "name": "disabled",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 132710,
+    "name": "tb-dev-test.triggerbee.com",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": true,
+    "group": {
+      "id": "shared/GlobalAccountSettings/group1111",
+      "name": "group1111"
+    }
+  },
+  {
+    "id": 566097,
+    "name": "No widget",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 473296,
+    "name": "Chargebee",
+    "isEngage": true,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 580023,
+    "name": "awebsite.com",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 327045,
+    "name": "cookie-test.triggerbee.com",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 518751,
+    "name": "tb-dev-spa.triggerbee.com",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 754605,
+    "name": "Shard test 2",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 890918,
+    "name": "Shard test 3",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 674803,
+    "name": "tb-dev-cosmos-test",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 896916,
+    "name": "sebbes cosmosdb test",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 650936,
+    "name": "tb-data3",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 968315,
+    "name": "tb-data2",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 473403,
+    "name": "tb-data1",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  },
+  {
+    "id": 651758,
+    "name": "Shard test!!!",
+    "isEngage": false,
+    "isExpired": false,
+    "areWidgetsActivated": false,
+    "group": null
+  }
+]}
