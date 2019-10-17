@@ -14,7 +14,7 @@ export class AccountDataService {
 
   getAccounts(): Observable<Account[]>{
 
-    return this.httpClient.get<Account[]>('http://localhost:3004/data');
+    return this.httpClient.get<Account[]>('http://localhost:3000/data');
 
   }
 
