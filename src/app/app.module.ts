@@ -7,15 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule  } from '@angular/material';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 //spinner
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
-
+// FormControl
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -35,7 +36,9 @@ import { LoaderService } from './services/loader.service';
     MatSortModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [
     LoaderService,
