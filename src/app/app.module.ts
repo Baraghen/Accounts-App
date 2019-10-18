@@ -7,8 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -17,6 +18,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 // FormControl
 import { ReactiveFormsModule } from '@angular/forms';
+import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/pop-up-group-picker.component';
 
 
 
@@ -24,7 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     AccountsComponent,
-    LoaderComponent
+    LoaderComponent,
+    PopUpGroupPickerComponent,
+    CategoryPopup
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatIconModule,
+    MatCheckboxModule,
+    MatButtonModule,
     ReactiveFormsModule
   ],
   providers: [
@@ -47,6 +53,9 @@ import { ReactiveFormsModule } from '@angular/forms';
       useClass: HttpInterceptorService,
       multi: true
     }
+  ],
+  entryComponents: [
+    CategoryPopup
   ],
   bootstrap: [AppComponent]
 })

@@ -14,14 +14,13 @@
 
     .searchContainer {
         width: 60%;
-        margin: 0 auto;
+        margin: 80px auto;
         display: flex;
         justify-content: space-between;
         border: .5px solid black;
         border-radius: 20px;
         padding: 30px;
-        margin-bottom: 20px;
-        transition: border ease 2000ms;
+        transition: border ease 200ms;
     }
 
     .searchContainer:hover{

@@ -15,6 +15,10 @@ export class AccountsComponent implements OnInit{
 
   columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group'];
 
+  receiveCategory($event) {
+    this.columnsToDisplay = $event
+  }
+
   dataSource;
 
   private sort: MatSort;
