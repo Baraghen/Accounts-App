@@ -16,8 +16,9 @@
             <mat-radio-group aria-label="" [(ngModel)]="filterValues.isEngage" #isEngage="ngModel" name="isEngage">
                 <mat-label>Search IsEngage </mat-label>
                 <div class="btns">
-                    <mat-radio-button value="true">True</mat-radio-button>
-                    <mat-radio-button value="false">False</mat-radio-button>
+                    <mat-radio-button value="true">true</mat-radio-button>
+                    <mat-radio-button value="false">false</mat-radio-button>
+                    <mat-radio-button value="">ignore</mat-radio-button>
                 </div>
             </mat-radio-group>
     
@@ -25,8 +26,9 @@
              #isExpired="ngModel" name="isExpired">
                 <mat-label>Search isExpired </mat-label>
                 <div class="btns">
-                    <mat-radio-button value="true">True</mat-radio-button>
-                    <mat-radio-button value="false">False</mat-radio-button>
+                    <mat-radio-button value="true">true</mat-radio-button>
+                    <mat-radio-button value="false">false</mat-radio-button>
+                    <mat-radio-button value="">ignore</mat-radio-button>
                 </div>
             </mat-radio-group>
     
@@ -34,8 +36,9 @@
             #areWidgetsActivated="ngModel" name="areWidgetsActivated">
                 <mat-label>Search areWidgetsActivated </mat-label>
                 <div class="btns">
-                    <mat-radio-button value="true">True</mat-radio-button>
-                    <mat-radio-button value="false">False</mat-radio-button>
+                    <mat-radio-button value="true">true</mat-radio-button>
+                    <mat-radio-button value="false">false</mat-radio-button>
+                    <mat-radio-button value="">ignore</mat-radio-button>
                 </div>
             </mat-radio-group>
 
@@ -47,6 +50,6 @@
             <input [(ngModel)]="filterValues.groupName" matInput type="text" #groupName="ngModel" name="groupName">
         </mat-form-field>
 
-        <button type="submit" mat-raised-button color="primary">Search</button>
+        <button type="submit" mat-raised-button color="primary">Filter</button>
     </form>
 </div>
