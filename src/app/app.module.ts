@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -18,7 +18,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 // FormControl
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SearchFieldComponent } from './search-field/search-field.component';
+
 import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/pop-up-group-picker.component';
 
 
@@ -28,6 +30,7 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/
     AppComponent,
     AccountsComponent,
     LoaderComponent,
+    SearchFieldComponent,
     PopUpGroupPickerComponent,
     CategoryPopup
   ],
@@ -43,6 +46,9 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatIconModule,
+    FormsModule,
+    MatButtonModule,
+    MatRadioModule,
     MatCheckboxModule,
     MatButtonModule,
     MatTooltipModule,

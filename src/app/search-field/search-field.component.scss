@@ -1,0 +1,21 @@
+.searchField-container{
+    width: 60%;
+    margin: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  form{
+      display: flex;
+      flex-direction: column;
+
+      mat-radio-group{
+          display: flex;
+          
+          mat-label{
+              margin: 5px 20px 5px 0px;
+            }
+          mat-radio-button{
+            margin: 5px 20px 5px 20px;
+          }
+      }
+  }
+}
