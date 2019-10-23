@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
@@ -16,7 +16,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 // FormControl
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SearchFieldComponent } from './search-field/search-field.component';
 
 
 
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     AccountsComponent,
-    LoaderComponent
+    LoaderComponent,
+    SearchFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
+    MatRadioModule
   ],
   providers: [
     LoaderService,
