@@ -3,10 +3,17 @@
     <mat-icon aria-hidden="false" class="errorIcon">error_outline</mat-icon>
     <h2> {{errorMessage}} </h2>
  </div>
- <app-search-field (filterEvent)="receiveFilterValues($event)"></app-search-field>
+
+
+    <app-search-field *ngIf="!hide" (filterEvent)="receiveFilterValues($event)"></app-search-field>
+
  <div class="table-container" *ngIf="dataSource">
 
-    <app-pop-up-group-picker (categoryEvent)="receiveCategory($event)"></app-pop-up-group-picker>
+     <div class="helpButtons">
+         <button mat-button (click)=toggleForm() matTooltip="Filter form"  matTooltipPosition="above"><mat-icon aria-hidden="false">search</mat-icon></button>
+         <app-pop-up-group-picker (categoryEvent)="receiveCategory($event)"></app-pop-up-group-picker>
+     </div>
+
     <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 dataTable">
 
         <ng-container matColumnDef="id">

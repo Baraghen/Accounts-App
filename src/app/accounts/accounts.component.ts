@@ -68,6 +68,13 @@ export class AccountsComponent implements OnInit{
     }
   }
 
+  hide = true;
+  
+  toggleForm(){
+    this.hide = !this.hide;
+  }
+
+
   ngOnInit() {
 
     if(localStorage.getItem('savedCategories') === null) {
@@ -77,6 +84,8 @@ export class AccountsComponent implements OnInit{
       this.columnsToDisplay = JSON.parse(localStorage.getItem('savedCategories'))
     }
     
+
+
       this.tableFilter();
       
     }
