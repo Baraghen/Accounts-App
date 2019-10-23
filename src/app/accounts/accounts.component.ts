@@ -15,6 +15,10 @@ export class AccountsComponent implements OnInit{
 
   columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group'];
 
+  receiveCategory($event) {
+    this.columnsToDisplay = $event
+  }
+
   dataSource;
 
   private sort: MatSort;
@@ -65,6 +69,13 @@ export class AccountsComponent implements OnInit{
   }
 
   ngOnInit() {
+
+    if(localStorage.getItem('savedCategories') === null) {
+      this.columnsToDisplay = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group'];
+    }
+    else {
+      this.columnsToDisplay = JSON.parse(localStorage.getItem('savedCategories'))
+    }
     
       this.tableFilter();
       

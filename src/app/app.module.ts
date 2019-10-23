@@ -9,6 +9,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
 import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTooltipModule } from '@angular/material/tooltip';
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -19,6 +21,8 @@ import { LoaderService } from './services/loader.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchFieldComponent } from './search-field/search-field.component';
 
+import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/pop-up-group-picker.component';
+
 
 
 @NgModule({
@@ -26,7 +30,9 @@ import { SearchFieldComponent } from './search-field/search-field.component';
     AppComponent,
     AccountsComponent,
     LoaderComponent,
-    SearchFieldComponent
+    SearchFieldComponent,
+    PopUpGroupPickerComponent,
+    CategoryPopup
   ],
   imports: [
     BrowserModule,
@@ -40,10 +46,13 @@ import { SearchFieldComponent } from './search-field/search-field.component';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatTooltipModule,
+    ReactiveFormsModule
   ],
   providers: [
     LoaderService,
@@ -52,6 +61,9 @@ import { SearchFieldComponent } from './search-field/search-field.component';
       useClass: HttpInterceptorService,
       multi: true
     }
+  ],
+  entryComponents: [
+    CategoryPopup
   ],
   bootstrap: [AppComponent]
 })

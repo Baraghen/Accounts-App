@@ -6,6 +6,42 @@
  <app-search-field (filterEvent)="receiveFilterValues($event)"></app-search-field>
  <div class="table-container" *ngIf="dataSource">
 
+    <ng-container>
+
+        <div class="searchContainer">
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="idFilter">
+            </mat-form-field>
+
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="nameFilter">
+            </mat-form-field>
+
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="isEngageFilter">
+            </mat-form-field>
+
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="isExpiredFilter">
+            </mat-form-field>
+
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="areWidgetsActivatedFilter">
+            </mat-form-field>
+
+            <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="groupFilter">
+            </mat-form-field>
+        </div>
+
+    </ng-container>
+    <app-pop-up-group-picker (categoryEvent)="receiveCategory($event)"></app-pop-up-group-picker>
     <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 dataTable">
 
         <ng-container matColumnDef="id">
