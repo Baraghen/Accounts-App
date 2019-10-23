@@ -11,31 +11,41 @@
             <input [(ngModel)]="filterValues.name" matInput type="text" #name="ngModel" name="name">
         </mat-form-field>
 
-        <mat-radio-group aria-label="" [(ngModel)]="filterValues.isEngage" #isEngage="ngModel" name="isEngage">
-            <mat-label>Search IsEngage </mat-label>
-            <mat-radio-button value="true">True</mat-radio-button>
-            <mat-radio-button value="false">False</mat-radio-button>
-        </mat-radio-group>
+        <div class="radioBtns">
 
-        <mat-radio-group aria-label="search isExpired" [(ngModel)]="filterValues.isExpired"
-         #isExpired="ngModel" name="isExpired">
-            <mat-label>Search isExpired </mat-label>
-            <mat-radio-button value="true">True</mat-radio-button>
-            <mat-radio-button value="false">False</mat-radio-button>
-        </mat-radio-group>
+            <mat-radio-group aria-label="" [(ngModel)]="filterValues.isEngage" #isEngage="ngModel" name="isEngage">
+                <mat-label>Search IsEngage </mat-label>
+                <div class="btns">
+                    <mat-radio-button value="true">True</mat-radio-button>
+                    <mat-radio-button value="false">False</mat-radio-button>
+                </div>
+            </mat-radio-group>
+    
+            <mat-radio-group aria-label="search isExpired" [(ngModel)]="filterValues.isExpired"
+             #isExpired="ngModel" name="isExpired">
+                <mat-label>Search isExpired </mat-label>
+                <div class="btns">
+                    <mat-radio-button value="true">True</mat-radio-button>
+                    <mat-radio-button value="false">False</mat-radio-button>
+                </div>
+            </mat-radio-group>
+    
+            <mat-radio-group aria-label="search areWidgetsActivated"  [(ngModel)]="filterValues.areWidgetsActivated"
+            #areWidgetsActivated="ngModel" name="areWidgetsActivated">
+                <mat-label>Search areWidgetsActivated </mat-label>
+                <div class="btns">
+                    <mat-radio-button value="true">True</mat-radio-button>
+                    <mat-radio-button value="false">False</mat-radio-button>
+                </div>
+            </mat-radio-group>
 
-        <mat-radio-group aria-label="search areWidgetsActivated"  [(ngModel)]="filterValues.areWidgetsActivated"
-        #areWidgetsActivated="ngModel" name="areWidgetsActivated">
-            <mat-label>Search areWidgetsActivated </mat-label>
-            <mat-radio-button value="true">True</mat-radio-button>
-            <mat-radio-button value="false">False</mat-radio-button>
-        </mat-radio-group>
+        </div>
 
         <mat-form-field class="filter" floatLabel="never">
             <mat-label>Search group name</mat-label>
             <input [(ngModel)]="filterValues.groupName" matInput type="text" #groupName="ngModel" name="groupName">
         </mat-form-field>
 
-        <button type="submit" mat-raised-button>Search</button>
+        <button type="submit" mat-raised-button color="primary">Search</button>
     </form>
 </div>

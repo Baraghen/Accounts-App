@@ -7,15 +7,22 @@
       display: flex;
       flex-direction: column;
 
-      mat-radio-group{
-          display: flex;
-          
-          mat-label{
-              margin: 5px 20px 5px 0px;
+     .radioBtns{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         mat-radio-group{
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             
+             mat-label{
+                text-align: center;
+              }
+            mat-radio-button{
+             margin: 0 10px;
             }
-          mat-radio-button{
-            margin: 5px 20px 5px 20px;
-          }
-      }
+        }
+     }
   }
 }
