@@ -10,6 +10,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTooltipModule } from '@angular/material/tooltip';
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -44,6 +45,7 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/
     MatIconModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatTooltipModule,
     ReactiveFormsModule
   ],
   providers: [

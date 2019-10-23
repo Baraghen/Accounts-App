@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { GroupCollection } from '../classes/group-collection';
 import { FormBuilder } from '@angular/forms'
@@ -10,26 +10,24 @@ import { FormBuilder } from '@angular/forms'
 })
 export class PopUpGroupPickerComponent implements OnInit {
 
-  @Input() parentData;
 
-  currentCategories: Array<string>;
 
   @Output() categoryEvent = new EventEmitter<Array<string>>();
 
   newCategories: Array<string>;
 
   categoryGroup: GroupCollection = {
-    id: null,
-    name: null,
-    isEngage: null,
-    isExpired: null,
-    areWidgetsActivated: null,
-    group: null
+    id: true,
+    name: true,
+    isEngage: true,
+    isExpired: true,
+    areWidgetsActivated: true,
+    group: true
   }
 
-  createGroup() {
+  createGroup(arr) {
     for(var key in this.categoryGroup) {
-      if(this.newCategories.includes(key)) {
+      if(arr.includes(key)) {
         this.categoryGroup[key] = true
       }
       else {
@@ -56,14 +54,19 @@ export class PopUpGroupPickerComponent implements OnInit {
       }
     }).afterClosed().subscribe(
       data => {
-          this.newCategories = Object.keys(data).filter(k => data[k])
-          this.sendCategory()
-          this.createGroup();
+          if(data !== undefined) {
+            this.newCategories = Object.keys(data).filter(k => data[k])
+            localStorage.setItem('savedCategories', JSON.stringify(Object.keys(data).filter(k => data[k])))
+            this.sendCategory()
+            this.createGroup(this.newCategories)
+          }
        })
   }
 
   ngOnInit() {
-    this.currentCategories = this.parentData;
+    if(localStorage.getItem('savedCategories') !== null){
+      this.createGroup(JSON.parse(localStorage.getItem('savedCategories')))
+    }
   }
 
 }

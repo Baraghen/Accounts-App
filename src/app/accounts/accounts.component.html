@@ -41,7 +41,7 @@
         </div>
 
     </ng-container>
-    <app-pop-up-group-picker (categoryEvent)="receiveCategory($event)" [parentData]="columnsToDisplay"></app-pop-up-group-picker>
+    <app-pop-up-group-picker (categoryEvent)="receiveCategory($event)"></app-pop-up-group-picker>
     <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 dataTable">
     
         <ng-container matColumnDef="id">
