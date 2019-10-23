@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 import { AccountDataService } from '../services/account-data.service';
 import { MatSort } from '@angular/material';
 import { MatTableDataSource } from '@angular/material/table'
-import { Account } from '../classes/account';
 
 @Component({
   selector: 'app-accounts',
@@ -18,6 +17,8 @@ export class AccountsComponent implements OnInit{
   receiveCategory($event) {
     this.columnsToDisplay = $event
   }
+
+  showTable: boolean;
 
   dataSource;
 
@@ -38,16 +39,16 @@ export class AccountsComponent implements OnInit{
   errorMessage;
 
   receiveFilterValues($event){
+    this.showTable = false;
     return this.tableFilter($event);
   }
 
   tableFilter(params?:object){
 
     if (params) {
-        console.log(params);
       this.accountDataService.filterAccounts(params).subscribe(
         data => {
-          
+          this.showTable = true;
           this.dataSource = new MatTableDataSource(data);
 
         }, 
@@ -58,7 +59,7 @@ export class AccountsComponent implements OnInit{
     } else{
       this.accountDataService.filterAccounts().subscribe(
         data => {
-          
+          this.showTable = true;
           this.dataSource = new MatTableDataSource(data);
   
         }, 
@@ -87,7 +88,6 @@ export class AccountsComponent implements OnInit{
 
 
       this.tableFilter();
-      
     }
 
     
