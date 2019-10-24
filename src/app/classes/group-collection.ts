@@ -5,4 +5,8 @@ export class GroupCollection {
     isExpired: boolean;
     areWidgetsActivated: boolean;
     group: boolean;
+    has_consent: boolean;
+    paused: boolean;
+    expireDate: boolean;
+    scheduledRemoval: boolean;
 }

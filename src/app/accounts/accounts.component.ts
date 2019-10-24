@@ -79,7 +79,7 @@ export class AccountsComponent implements OnInit{
   ngOnInit() {
 
     if(localStorage.getItem('savedCategories') === null) {
-      this.columnsToDisplay = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group'];
+      this.columnsToDisplay = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
     }
     else {
       this.columnsToDisplay = JSON.parse(localStorage.getItem('savedCategories'))
