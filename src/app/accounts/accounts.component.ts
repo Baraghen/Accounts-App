@@ -12,7 +12,7 @@ export class AccountsComponent implements OnInit{
 
   constructor(private accountDataService: AccountDataService) { }
 
-  columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group'];
+  columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
 
   receiveCategory($event) {
     this.columnsToDisplay = $event
