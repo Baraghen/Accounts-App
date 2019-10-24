@@ -22,7 +22,11 @@ export class PopUpGroupPickerComponent implements OnInit {
     isEngage: true,
     isExpired: true,
     areWidgetsActivated: true,
-    group: true
+    group: true,
+    has_consent: true,
+    paused: true,
+    expireDate: true,
+    scheduledRemoval: true
   }
 
   createGroup(arr) {
@@ -50,7 +54,11 @@ export class PopUpGroupPickerComponent implements OnInit {
         isEngage: this.categoryGroup.isEngage,
         isExpired: this.categoryGroup.isExpired,
         areWidgetsActivated: this.categoryGroup.areWidgetsActivated,
-        group: this.categoryGroup.group
+        group: this.categoryGroup.group,
+        has_consent: this.categoryGroup.has_consent,
+        paused: this.categoryGroup.paused,
+        expireDate: this.categoryGroup.expireDate,
+        scheduledRemoval: this.categoryGroup.scheduledRemoval,
       }
     }).afterClosed().subscribe(
       data => {
@@ -91,7 +99,11 @@ export class CategoryPopup {
       isEngage: [this.groupData.isEngage],
       isExpired: [this.groupData.isExpired],
       areWidgetsActivated: [this.groupData.areWidgetsActivated],
-      group: [this.groupData.group]
+      group: [this.groupData.group],
+      has_consent: [this.groupData.has_consent],
+      paused: [this.groupData.paused],
+      expireDate: [this.groupData.expireDate],
+      scheduledRemoval: [this.groupData.scheduledRemoval],
     })
   }
 
