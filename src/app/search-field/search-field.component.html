@@ -3,17 +3,17 @@
 
         <mat-form-field class="filter" floatLabel="never">
             <mat-label>Search id</mat-label>
-            <input [(ngModel)]="filterValues.id" matInput type="text" #id="ngModel" name="id">
+            <input [(ngModel)]="filterValuesAcc.id" matInput type="text" #id="ngModel" name="id">
         </mat-form-field>
 
         <mat-form-field class="filter" floatLabel="never">
             <mat-label>Search name </mat-label>
-            <input [(ngModel)]="filterValues.name" matInput type="text" #name="ngModel" name="name">
+            <input [(ngModel)]="filterValuesAcc.name" matInput type="text" #name="ngModel" name="name">
         </mat-form-field>
 
         <div class="radioBtns">
 
-            <mat-radio-group aria-label="" [(ngModel)]="filterValues.isEngage" #isEngage="ngModel" name="isEngage">
+            <mat-radio-group aria-label="search IsEngage" [(ngModel)]="filterValuesAcc.isEngage" #isEngage="ngModel" name="isEngage">
                 <mat-label>Search IsEngage </mat-label>
                 <div class="btns">
                     <mat-radio-button value="true">true</mat-radio-button>
@@ -22,7 +22,7 @@
                 </div>
             </mat-radio-group>
     
-            <mat-radio-group aria-label="search isExpired" [(ngModel)]="filterValues.isExpired"
+            <mat-radio-group aria-label="search isExpired" [(ngModel)]="filterValuesAcc.isExpired"
              #isExpired="ngModel" name="isExpired">
                 <mat-label>Search isExpired </mat-label>
                 <div class="btns">
@@ -32,7 +32,7 @@
                 </div>
             </mat-radio-group>
     
-            <mat-radio-group aria-label="search areWidgetsActivated"  [(ngModel)]="filterValues.areWidgetsActivated"
+            <mat-radio-group aria-label="search areWidgetsActivated"  [(ngModel)]="filterValuesAcc.areWidgetsActivated"
             #areWidgetsActivated="ngModel" name="areWidgetsActivated">
                 <mat-label>Search areWidgetsActivated </mat-label>
                 <div class="btns">
@@ -41,13 +41,43 @@
                     <mat-radio-button value="">ignore</mat-radio-button>
                 </div>
             </mat-radio-group>
-
-            
         </div>
 
         <mat-form-field class="filter" floatLabel="never">
             <mat-label>Search group name</mat-label>
-            <input [(ngModel)]="filterValues.groupName" matInput type="text" #groupName="ngModel" name="groupName">
+            <input [(ngModel)]="filterValuesAcc.groupName" matInput type="text" #groupName="ngModel" name="groupName">
+        </mat-form-field>
+
+        <div class="radioBtns">
+            <mat-radio-group aria-label="search has_consent" [(ngModel)]="filterValuesInfo.has_consent"
+            #has_consent="ngModel" name="has_consent">
+               <mat-label>Search has_consent</mat-label>
+               <div class="btns">
+                   <mat-radio-button value="true">true</mat-radio-button>
+                   <mat-radio-button value="false">false</mat-radio-button>
+                   <mat-radio-button value="">ignore</mat-radio-button>
+               </div>
+           </mat-radio-group>
+    
+           <mat-radio-group aria-label="search paused"  [(ngModel)]="filterValuesInfo.paused"
+           #paused="ngModel" name="paused">
+               <mat-label>Search paused</mat-label>
+               <div class="btns">
+                   <mat-radio-button value="true">true</mat-radio-button>
+                   <mat-radio-button value="false">false</mat-radio-button>
+                   <mat-radio-button value="">ignore</mat-radio-button>
+               </div>
+           </mat-radio-group>
+        </div>
+
+        <mat-form-field class="filter" floatLabel="never">
+            <mat-label>Search expireDate</mat-label>
+            <input [(ngModel)]="filterValuesInfo.expireDate" matInput type="text" #expireDate="ngModel" name="expireDate">
+        </mat-form-field>
+
+        <mat-form-field class="filter" floatLabel="never">
+            <mat-label>Search scheduledRemoval</mat-label>
+            <input [(ngModel)]="filterValuesInfo.scheduledRemoval" matInput type="text" #scheduledRemoval="ngModel" name="groupName">
         </mat-form-field>
 
         <button type="submit" mat-raised-button color="primary">Filter</button>

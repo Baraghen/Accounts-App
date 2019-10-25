@@ -8,5 +8,6 @@ export class Account{
     group: {
         id: string;
         name: string;
-    };
+    }
+
 }
