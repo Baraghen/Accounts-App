@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup} from '@angular/forms';
+import {FilterValues}  from '../classes/filterValues';
 import { Account } from '../classes/account';
 
 
@@ -15,7 +16,7 @@ export class SearchFieldComponent implements OnInit {
   filterForm: FormGroup;
 
 
-   filterValues: object = {
+   filterValuesAcc: object = {
     id: '',
     name: '',
     isEngage: '',
@@ -24,10 +25,16 @@ export class SearchFieldComponent implements OnInit {
     groupName: ''
   }
 
+  filterValuesInfo: object = {
+    has_consent: '',
+    paused: '',
+    expireDate: '',
+    scheduledRemoval: ''
+ }
 
+ filterValues = new FilterValues();
 
-
-  @Output() filterEvent = new EventEmitter<object>(); 
+  @Output() filterEvent = new EventEmitter<FilterValues>(); 
   
 
   ngOnInit() {
@@ -35,8 +42,9 @@ export class SearchFieldComponent implements OnInit {
   }
 
   onSubmit(){
-    this.filterEvent.emit(this.filterValues);
-    
+    this.filterValues.account = this.filterValuesAcc;
+    this.filterValues.info = this.filterValuesInfo;
+    this.filterEvent.emit(this.filterValues);   
   }
  
 

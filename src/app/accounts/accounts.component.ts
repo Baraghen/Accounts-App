@@ -6,6 +6,11 @@ import { MatTableDataSource } from '@angular/material/table'
 import { AccountDataService } from '../services/account-data.service';
 // Router
 import { Router } from '@angular/router';
+// Classes
+import { Account } from '../classes/account';
+import { AccountInfo } from '../classes/accountInfo';
+import { FullAccount } from '../classes/fullAccount';
+import { FilterValues } from '../classes/filterValues';
 
 @Component({
   selector: 'app-accounts',
@@ -51,25 +56,62 @@ export class AccountsComponent implements OnInit{
     return this.tableFilter($event);
   }
 
-  tableFilter(params?:object){
 
+  accountList: Account[];
+  accountInfoList: AccountInfo[];
+
+  tableFilter(params?:FilterValues){
     if (params) {
-      this.accountDataService.filterAccounts(params).subscribe(
-        data => {
-          this.showTable = true;
-          this.dataSource = new MatTableDataSource(data);
 
+      this.accountDataService.getAllAccountData(params).subscribe(
+        data => {
+          this.accountList = data[0];
+          this.accountInfoList = data[1];
+          let arr = [];
+          
+          this.accountList.forEach(acc => {
+            let id = acc.id.toString();
+            this.accountInfoList.forEach(info => {
+              if (id == info.site_id) {
+                let fullAccount = new FullAccount;
+    
+                fullAccount.account = acc;
+                fullAccount.accountInfo = info;
+                
+                arr.push(fullAccount);
+              }
+            })
+          })
+          this.showTable = true;
+          this.dataSource = new MatTableDataSource(arr);
         }, 
         error => {
           this.errorMessage = error;
         });
 
-    } else{
-      this.accountDataService.filterAccounts().subscribe(
+    } else {
+      
+      this.accountDataService.getAllAccountData().subscribe(
         data => {
+          this.accountList = data[0];
+          this.accountInfoList = data[1];
+          let arr = [];
+          
+          this.accountList.forEach(acc => {
+             let id = acc.id.toString();
+
+            this.accountInfoList.forEach(info => {
+              if (id == info.site_id) {
+                let fullAccount = new FullAccount;
+                fullAccount.account = acc;
+                fullAccount.accountInfo = info;
+                
+                arr.push(fullAccount);
+              }
+            })
+          })
           this.showTable = true;
-          this.dataSource = new MatTableDataSource(data);
-  
+          this.dataSource = new MatTableDataSource(arr);
         }, 
         error => {
           this.errorMessage = error;
@@ -83,7 +125,6 @@ export class AccountsComponent implements OnInit{
     this.hide = !this.hide;
   }
 
-
   ngOnInit() {
 
     if(localStorage.getItem('savedCategories') === null) {
@@ -93,12 +134,10 @@ export class AccountsComponent implements OnInit{
       this.columnsToDisplay = JSON.parse(localStorage.getItem('savedCategories'))
     }
     
+    this.tableFilter();
 
-
-      this.tableFilter();
     }
 
-    
 
 
     
