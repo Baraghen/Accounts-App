@@ -1,7 +1,11 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
-import { AccountDataService } from '../services/account-data.service';
+// Materials
 import { MatSort } from '@angular/material';
 import { MatTableDataSource } from '@angular/material/table'
+// Service
+import { AccountDataService } from '../services/account-data.service';
+// Router
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -10,12 +14,16 @@ import { MatTableDataSource } from '@angular/material/table'
 })
 export class AccountsComponent implements OnInit{
 
-  constructor(private accountDataService: AccountDataService) { }
+  constructor(private accountDataService: AccountDataService, private router: Router) { }
 
   columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
 
   receiveCategory($event) {
     this.columnsToDisplay = $event
+  }
+
+  onSelect(account) {
+    this.router.navigate(['/account', account.id]);
   }
 
   showTable: boolean;

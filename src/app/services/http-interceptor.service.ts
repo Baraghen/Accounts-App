@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import { retry, catchError, finalize, delay } from 'rxjs/operators';
+import { retry, catchError, finalize } from 'rxjs/operators';
 import { LoaderService } from './loader.service';
 
 @Injectable({
@@ -18,8 +18,7 @@ export class HttpInterceptorService implements HttpInterceptor{
 
     return next.handle(request)
      .pipe(
-       retry(1), //delay för testandet av spinnern
-       delay(500),finalize(() => this.loaderService.hide()),
+       retry(1),finalize(() => this.loaderService.hide()),
        catchError((error: HttpErrorResponse) => {
          let errorMessage = '';
          if (error.error instanceof ErrorEvent) {

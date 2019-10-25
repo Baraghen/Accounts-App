@@ -11,6 +11,10 @@ import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIcon
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
+
 //interceptor
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -22,6 +26,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchFieldComponent } from './search-field/search-field.component';
 
 import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/pop-up-group-picker.component';
+import { AccountOverviewPageComponent } from './account-overview-page/account-overview-page.component';
 
 
 
@@ -32,7 +37,8 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/
     LoaderComponent,
     SearchFieldComponent,
     PopUpGroupPickerComponent,
-    CategoryPopup
+    CategoryPopup,
+    AccountOverviewPageComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +58,9 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/
     MatCheckboxModule,
     MatButtonModule,
     MatTooltipModule,
+    MatCardModule,
+    MatGridListModule,
+    MatListModule,
     ReactiveFormsModule
   ],
   providers: [
