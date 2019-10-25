@@ -44,7 +44,6 @@ export class SearchFieldComponent implements OnInit {
   onSubmit(){
     this.filterValues.account = this.filterValuesAcc;
     this.filterValues.info = this.filterValuesInfo;
-
     this.filterEvent.emit(this.filterValues);   
   }
  

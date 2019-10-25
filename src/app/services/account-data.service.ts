@@ -27,30 +27,22 @@ export class AccountDataService {
       let params = new HttpParams();
       
       Object.keys(obj).forEach(key=>{
-
       let keyName = key;
       let value = obj[key];
-        
-        if (value) {
-          if (keyName == 'groupName') {
-
-            keyName = 'group.name';
-            params = params.append(keyName, value); 
-            
-          } else{
-
-            params = params.append(keyName, value);
-            
-          }          
-        }
-      })
-      
-      return this.httpClient.get<Account[]>(`${this.accountUrl}`, {params:params}); 
+      if (value) {
+        if (keyName == 'groupName') {
+          keyName = 'group.name';
+          params = params.append(keyName, value); 
+        } else{
+          params = params.append(keyName, value);
+        }          
+      }
+    })
+      return this.httpClient.get<Account[]>(`${this.accountUrl}`, {params:params});
 
     } else {
-
       return this.httpClient.get<Account[]>(`${this.accountUrl}`);
-
+      
     }
   }
   
@@ -63,7 +55,6 @@ export class AccountDataService {
 
   getAllAccountData(obj?:FilterValues):Observable<any>{
     if(obj){
-
       let paramsAcc = new HttpParams();
       let paramsInfo = new HttpParams();
       
@@ -72,49 +63,32 @@ export class AccountDataService {
       let keyName = key;
       let value = obj.account[key];
 
-        
         if (value) {
           if (keyName == 'groupName') {
-
             keyName = 'group.name';
             paramsAcc = paramsAcc.append(keyName, value); 
           } else{
-            
             paramsAcc = paramsAcc.append(keyName, value);
-            
           }
         }
-        
       })
-
       Object.keys(obj.info).forEach(key=>{
 
         let keyName = key;
         let value = obj.info[key];
-  
-          
-          if (value) {
+        if (value) {
             paramsInfo = paramsInfo.append(keyName, value);
-          }
-          
-        })
-
-      
-      console.log(paramsInfo);
-      console.log(paramsAcc);
-
+        }
+      })
       let requestedAccounts = this.httpClient.get<Account[]>(`${this.accountUrl}`, {params:paramsAcc});
       let requestedInfo = this.httpClient.get<AccountInfo[]>(`${this.infoUrl}`, {params:paramsInfo});
-  
   
       return forkJoin([requestedAccounts, requestedInfo]); 
 
     } else {
-
       let requestedAccounts = this.httpClient.get<Account[]>(this.accountUrl);
       let requestedInfo = this.httpClient.get<AccountInfo[]>(this.infoUrl);
-  
-  
+
       return forkJoin([requestedAccounts, requestedInfo]);
     }
 

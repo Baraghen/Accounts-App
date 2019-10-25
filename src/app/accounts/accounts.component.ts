@@ -47,31 +47,6 @@ export class AccountsComponent implements OnInit{
     return this.tableFilter($event);
   }
 
-/*   tableFilter(params?:object){
-
-    if (params) {
-      this.accountDataService.filterAccounts(params).subscribe(
-        data => {
-          this.showTable = true;
-          this.dataSource = new MatTableDataSource(data);
-          
-        }, 
-        error => {
-          this.errorMessage = error;
-        });
-        
-      } else{
-        this.accountDataService.filterAccounts().subscribe(
-          data => {
-            this.showTable = true;
-            this.dataSource = new MatTableDataSource(data);
-  
-        }, 
-        error => {
-          this.errorMessage = error;
-        });
-    }
-  } */
 
   accountList: Account[];
   accountInfoList: AccountInfo[];
@@ -81,7 +56,6 @@ export class AccountsComponent implements OnInit{
 
       this.accountDataService.getAllAccountData(params).subscribe(
         data => {
-          
           this.accountList = data[0];
           this.accountInfoList = data[1];
           let arr = [];
@@ -90,7 +64,6 @@ export class AccountsComponent implements OnInit{
             let id = acc.id.toString();
             this.accountInfoList.forEach(info => {
               if (id == info.site_id) {
-                
                 let fullAccount = new FullAccount;
     
                 fullAccount.account = acc;
@@ -100,32 +73,27 @@ export class AccountsComponent implements OnInit{
               }
             })
           })
-          
           this.showTable = true;
-
           this.dataSource = new MatTableDataSource(arr);
-               
         }, 
         error => {
           this.errorMessage = error;
         });
-      
-    } else {
 
+    } else {
+      
       this.accountDataService.getAllAccountData().subscribe(
         data => {
-          
           this.accountList = data[0];
           this.accountInfoList = data[1];
           let arr = [];
           
           this.accountList.forEach(acc => {
              let id = acc.id.toString();
+
             this.accountInfoList.forEach(info => {
               if (id == info.site_id) {
-                
                 let fullAccount = new FullAccount;
-    
                 fullAccount.account = acc;
                 fullAccount.accountInfo = info;
                 
@@ -133,12 +101,8 @@ export class AccountsComponent implements OnInit{
               }
             })
           })
-          
           this.showTable = true;
-
           this.dataSource = new MatTableDataSource(arr);
-      
-          
         }, 
         error => {
           this.errorMessage = error;
