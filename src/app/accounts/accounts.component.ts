@@ -61,8 +61,6 @@ export class AccountsComponent implements OnInit{
   accountInfoList: AccountInfo[];
 
   tableFilter(params?:FilterValues){
-    if (params) {
-
       this.accountDataService.getAllAccountData(params).subscribe(
         data => {
           this.accountList = data[0];
@@ -88,35 +86,6 @@ export class AccountsComponent implements OnInit{
         error => {
           this.errorMessage = error;
         });
-
-    } else {
-      
-      this.accountDataService.getAllAccountData().subscribe(
-        data => {
-          this.accountList = data[0];
-          this.accountInfoList = data[1];
-          let arr = [];
-          
-          this.accountList.forEach(acc => {
-             let id = acc.id.toString();
-
-            this.accountInfoList.forEach(info => {
-              if (id == info.site_id) {
-                let fullAccount = new FullAccount;
-                fullAccount.account = acc;
-                fullAccount.accountInfo = info;
-                
-                arr.push(fullAccount);
-              }
-            })
-          })
-          this.showTable = true;
-          this.dataSource = new MatTableDataSource(arr);
-        }, 
-        error => {
-          this.errorMessage = error;
-        });
-    }
   }
 
   hide = true;
