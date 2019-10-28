@@ -1,0 +1,56 @@
+.accountContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 1300px;
+
+    .cardContainer {
+        background-color: rgba(240, 240, 240, 0.562);
+        width: 1000px;
+        padding: 50px;
+
+        .topCards {
+            display: flex;
+            justify-content: space-between;
+
+            .cardMd {
+                width: 450px;
+                height: 400px;
+            }
+        }
+
+        .midCards {
+
+            .scriptArea {
+                width: 100%;
+                height: 280px;
+                padding: 0;
+                border-color: rgba(146, 146, 146, 0.308);
+
+            }
+                    button {
+                        margin: 10px 0;
+                        width: 100%;
+                    }
+
+            .cardL {
+                height: 400px;
+            }
+        }
+
+        .btmCards {
+            display: flex;
+            justify-content: space-between;
+
+            .cardS {
+                width: 450px;
+            }
+        }
+    }
+
+    mat-card {
+        margin-bottom: 40px;
+    }
+
+}

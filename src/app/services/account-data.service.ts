@@ -3,7 +3,6 @@ import { Observable, forkJoin } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Account } from '../classes/account';
 import { AccountInfo } from '../classes/accountInfo';
-import { FullAccount } from '../classes/fullAccount';
 import { FilterValues } from '../classes/filterValues';
 
 @Injectable({

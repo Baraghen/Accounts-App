@@ -1,0 +1,102 @@
+<div class="accountContainer" *ngIf="showContent">
+        <h2>Account Overview</h2>
+    <div class="cardContainer">
+
+
+        <div class="topCards">
+            <mat-card class="personCard cardMd">
+                <mat-card-header>
+                    <mat-card-title>Account Info</mat-card-title>
+                    <mat-card-subtitle>Small collection of account information</mat-card-subtitle>           
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Account ID</h4>
+                            <p mat-line>{{ accountData[1][0].account_id }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Site ID</h4>
+                            <p mat-line>{{ accountData[1][0].site_id }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Name</h4>
+                            <p mat-line>{{ accountData[1][0].name }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>URLs</h4>
+                            <p mat-line *ngFor="let url of accountData[1][0].urls">{{ url }}</p>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="booleanList cardMd">
+                <mat-card-header>
+                    <mat-card-title>Engagement</mat-card-title>
+                    <mat-card-subtitle>Small collection of engagement information</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Is Engage</h4>
+                            <p mat-line>{{ accountData[1][0].is_engage }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Has Consent</h4>
+                            <p mat-line>{{ accountData[1][0].has_consent }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Paused</h4>
+                            <p mat-line>{{ accountData[1][0].paused }}</p>
+                        </mat-list-item>
+                        <mat-list-item role="listitem">
+                            <h4 mat-line>Expired</h4>
+                            <p mat-line>{{ accountData[1][0].expired }}</p>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="midCards">
+            <mat-card class="scriptCard cardL">
+                <mat-card-header>
+                    <mat-card-title>Client Script</mat-card-title>
+                    <mat-card-subtitle>This is a javascript that will be executed on the clients public site, used for extra logging and customizing Triggerbee.</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <textarea matInput class="scriptArea">{{ accountData[1][0].client_script }}</textarea>
+                    <button mat-raised-button color="primary">Save</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="btmCards">
+            <mat-card class="cardS">
+                <mat-card-header>
+                    <mat-card-title>Expire Date</mat-card-title>
+                    <mat-card-subtitle>Expiration date for something</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            <p mat-line>{{convertToDate(accountData[1][0].expireDate)}}</p>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="cardS">
+                <mat-card-header>
+                    <mat-card-title>Scheduled Removal</mat-card-title>
+                    <mat-card-subtitle>Scheduled date for removal of something</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            <p mat-line>{{convertToDate(accountData[1][0].scheduledRemoval)}}</p>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+</div>
