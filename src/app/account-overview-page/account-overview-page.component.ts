@@ -41,7 +41,6 @@ export class AccountOverviewPageComponent implements OnInit {
       data => {
         this.accountData = data;
         this.showContent = true;
-        console.log(this.accountData)
       }
     )
   }
