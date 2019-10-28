@@ -10,7 +10,6 @@
 }
 
 .table-container{
-    width: 100%;
 
     .helpButtons{
         width: 60%;
@@ -21,7 +20,11 @@
 
     table{
         width: 60%;
-        margin: 0 auto;
+        margin: 0 auto 5%;
+
+        .nameLink:hover {
+            cursor: pointer;
+        }
         
 
     }

@@ -2316,7 +2316,7 @@
       "paused": false,
       "expired": true,
       "expireDate": "1564920273983",
-      "scheduledRemoval": 1580483073,
+      "scheduledRemoval": 1580483073983,
       "hasPopularityAnalytics": false,
       "hasScraping": false,
       "apiKeys": []
@@ -3015,7 +3015,7 @@
       "paused": false,
       "expired": true,
       "expireDate": "1562324951475",
-      "scheduledRemoval": 1577887751,
+      "scheduledRemoval": 1577887751475,
       "hasPopularityAnalytics": false,
       "hasScraping": false,
       "apiKeys": []
@@ -4231,7 +4231,7 @@
       "paused": false,
       "expired": true,
       "expireDate": "1562753518173",
-      "scheduledRemoval": 1578316318,
+      "scheduledRemoval": 1578316318173,
       "hasPopularityAnalytics": false,
       "hasScraping": false,
       "apiKeys": [
@@ -5091,7 +5091,7 @@
       "paused": false,
       "expired": true,
       "expireDate": "1557640596028",
-      "scheduledRemoval": 1573203396,
+      "scheduledRemoval": 1573203396028,
       "hasPopularityAnalytics": false,
       "hasScraping": false,
       "apiKeys": [
