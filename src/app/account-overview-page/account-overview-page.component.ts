@@ -28,11 +28,10 @@ export class AccountOverviewPageComponent implements OnInit {
   }
 
   options = {
-    weekday: 'long', 
-    year: 'numeric', 
-    month: 'long', 
+    weekday: 'short', 
     day: 'numeric',
-    timeZoneName: 'short'
+    month: 'long', 
+    year: 'numeric' 
   }
 
   d = new Date(1562324951475).toLocaleString('en-SE', this.options);
@@ -42,7 +41,6 @@ export class AccountOverviewPageComponent implements OnInit {
       data => {
         this.accountData = data;
         this.showContent = true;
-        console.log(this.accountData)
       }
     )
   }
