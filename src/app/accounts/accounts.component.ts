@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
+import { ChangeDetectorRef } from "@angular/core";
 // Materials
 import { MatSort } from '@angular/material';
 import { MatTableDataSource } from '@angular/material/table'
@@ -19,9 +20,10 @@ import { FilterValues } from '../classes/filterValues';
 })
 export class AccountsComponent implements OnInit{
 
-  constructor(private accountDataService: AccountDataService, private router: Router) { }
+  constructor(private accountDataService: AccountDataService, private router: Router, private changeDetector: ChangeDetectorRef) { }
 
   columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
+ 
 
   receiveCategory($event) {
     this.columnsToDisplay = $event
@@ -41,13 +43,15 @@ export class AccountsComponent implements OnInit{
     this.sort = ms;
     this.setDataSourceAttributes();
   }
-
+  
   setDataSourceAttributes() {
     if (this.dataSource) {
-      
+
       this.dataSource.sort = this.sort;
+      
     }
   }
+
   
   errorMessage;
 
@@ -61,13 +65,11 @@ export class AccountsComponent implements OnInit{
   accountInfoList: AccountInfo[];
 
   tableFilter(params?:FilterValues){
-    if (params) {
-
       this.accountDataService.getAllAccountData(params).subscribe(
         data => {
           this.accountList = data[0];
           this.accountInfoList = data[1];
-          let arr = [];
+          let arr: FullAccount[] = [];
           
           this.accountList.forEach(acc => {
             let id = acc.id.toString();
@@ -79,44 +81,33 @@ export class AccountsComponent implements OnInit{
                 fullAccount.accountInfo = info;
                 
                 arr.push(fullAccount);
+
               }
             })
           })
           this.showTable = true;
-          this.dataSource = new MatTableDataSource(arr);
-        }, 
-        error => {
-          this.errorMessage = error;
-        });
-
-    } else {
-      
-      this.accountDataService.getAllAccountData().subscribe(
-        data => {
-          this.accountList = data[0];
-          this.accountInfoList = data[1];
-          let arr = [];
           
-          this.accountList.forEach(acc => {
-             let id = acc.id.toString();
-
-            this.accountInfoList.forEach(info => {
-              if (id == info.site_id) {
-                let fullAccount = new FullAccount;
-                fullAccount.account = acc;
-                fullAccount.accountInfo = info;
-                
-                arr.push(fullAccount);
-              }
-            })
-          })
-          this.showTable = true;
           this.dataSource = new MatTableDataSource(arr);
+          this.dataSource.sortingDataAccessor = (item, property) => {
+            switch (property) {
+              case 'id': return item.account.id;
+              case 'name': return item.account.name;
+              case 'isEngage': return item.account.isEngage;
+              case 'isExpired': return item.account.isExpired;
+              case 'areWidgetsActivated': return item.account.areWidgetsActivated;
+              case 'group': return item.account.group;
+              case 'has_consent': return item.accountInfo.has_consent;
+              case 'paused': return item.accountInfo.paused;
+              case 'expireDate': return item.accountInfo.expireDate;
+              case 'scheduledRemoval': return item.accountInfo.scheduledRemoval;
+              default: return item[property];
+            }
+          };
+          
         }, 
         error => {
           this.errorMessage = error;
         });
-    }
   }
 
   hide = true;
@@ -126,6 +117,8 @@ export class AccountsComponent implements OnInit{
   }
 
   ngOnInit() {
+
+    this.dataSource = new MatTableDataSource([]);
 
     if(localStorage.getItem('savedCategories') === null) {
       this.columnsToDisplay = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
@@ -137,7 +130,6 @@ export class AccountsComponent implements OnInit{
     this.tableFilter();
 
     }
-
 
 
     
