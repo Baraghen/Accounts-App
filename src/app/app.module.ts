@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule, MatPaginatorModule, MatChipsModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule, MatPaginatorModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -63,8 +63,7 @@ import { AccountGroupsComponent } from './account-groups/account-groups.componen
     MatGridListModule,
     MatListModule,
     ReactiveFormsModule,
-    MatPaginatorModule,
-    MatChipsModule
+    MatPaginatorModule
   ],
   providers: [
     LoaderService,

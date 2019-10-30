@@ -1,16 +1,54 @@
-div{
-    width: 50%;
-    margin: 0 auto;
+.tableContainer{
+    width: 60%;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
+
     .searchBtn{
         width: 100%;
         display: flex;
-        button{
-        width: 10%;
-        align-self: flex-end;
-       }
-    }
-    
+        justify-content: flex-end;
 
+        button {
+            margin: 8px;
+        }
+    }
+
+    table {
+
+        padding: 0 15px;
+
+        th {
+            font-size: 16px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+    
+            li {
+                text-align: center;
+                width: 100px;
+                padding: 2px 8px;
+                margin: 3px 0;
+            }
+            
+            .accListItem {
+                border: 0.5px solid rgba(158, 158, 158, 0.3);
+                border-radius: 5px;
+            }
+    
+            .showLink {
+                text-decoration: underline;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .more_vert {
+            text-align: right;
+            padding-right: 14px;
+        }
+    }
 }
