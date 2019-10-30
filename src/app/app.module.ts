@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule, MatPaginatorModule, MatChipsModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -26,6 +26,7 @@ import { SearchFieldComponent } from './search-field/search-field.component';
 
 import { PopUpGroupPickerComponent, CategoryPopup } from './pop-up-group-picker/pop-up-group-picker.component';
 import { AccountOverviewPageComponent } from './account-overview-page/account-overview-page.component';
+import { AccountGroupsComponent } from './account-groups/account-groups.component';
 
 
 
@@ -37,7 +38,8 @@ import { AccountOverviewPageComponent } from './account-overview-page/account-ov
     SearchFieldComponent,
     PopUpGroupPickerComponent,
     CategoryPopup,
-    AccountOverviewPageComponent
+    AccountOverviewPageComponent,
+    AccountGroupsComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,9 @@ import { AccountOverviewPageComponent } from './account-overview-page/account-ov
     MatCardModule,
     MatGridListModule,
     MatListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatChipsModule
   ],
   providers: [
     LoaderService,
