@@ -16,9 +16,19 @@
     
         <ng-container matColumnDef="admins">
             <th mat-header-cell *matHeaderCellDef>Group Admins</th>
-            <td mat-cell *matCellDef="let object"><mat-chip-list>
-                <mat-chip>{{object.admin}}</mat-chip>
-            </mat-chip-list></td>
+            <td mat-cell *matCellDef="let object">
+                <ng-container>
+                    <mat-chip-list *ngIf="object.admins.length <= 2">
+                        <mat-chip *ngFor="let admin of object.admins; let i=index">{{admin}}</mat-chip>
+                        <li *ngFor="let admin of object.admins; let i=index">{{admin}}</li>
+                    </mat-chip-list>
+                    <mat-chip-list *ngIf="object.admins.length >= 3">
+                        <mat-chip *ngFor="let admin of object.admins | slice:0:2; let i=index">{{admin}}</mat-chip>
+                        <mat-chip *ngFor="let admin of object.admins | slice:2:object.admins.length; let i=index">{{admin}}</mat-chip>
+                    </mat-chip-list>
+                </ng-container>
+
+            </td>
         </ng-container>
     
         <ng-container matColumnDef="button">

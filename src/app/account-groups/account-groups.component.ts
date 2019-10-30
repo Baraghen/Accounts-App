@@ -14,10 +14,10 @@ export class AccountGroupsComponent implements OnInit {
   displayedColumns: string[] = ['title','accounts', 'admins', 'button'];
 
   accountGroups: Object[] = [
-    {title: 'business25', accounts: 12, admins:['Mats', 'Jonas', 'Bengt']},
+    {title: 'business25', accounts: 12, admins:['Mats', 'Jonas', 'Bengt', 'Natalie']},
     {title: 'business12', accounts: 5, admins: ['John Doe']},
     {title: 'business3911', accounts: 4, admins: ['Jane Doe']},
-    {title: 'business40', accounts: 16, admins: ['Sara', 'Örjan', 'Herkules']}
+    {title: 'business40', accounts: 16, admins: ['Sara', 'Örjan']}
   ];
 
   dataSource;
