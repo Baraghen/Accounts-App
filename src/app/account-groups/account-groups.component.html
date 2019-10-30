@@ -1,8 +1,9 @@
 <div class="mat-elevation-z8">
     
-    <ng-container class="searchBtn">
+    <div class="searchBtn">
         <button mat-button><mat-icon aria-hidden="false">search</mat-icon></button>
-    </ng-container>
+    </div>
+
     <table mat-table [dataSource]="dataSource" >
         <ng-container matColumnDef="title">
             <th mat-header-cell *matHeaderCellDef><mat-checkbox>Title</mat-checkbox></th>
