@@ -4,14 +4,14 @@ import { ChangeDetectorRef } from "@angular/core";
 import { MatSort } from '@angular/material';
 import { MatTableDataSource } from '@angular/material/table'
 // Service
-import { AccountDataService } from '../services/account-data.service';
+import { AccountDataService } from '../../services/account-data.service';
 // Router
 import { Router } from '@angular/router';
 // Classes
-import { Account } from '../classes/account';
-import { AccountInfo } from '../classes/accountInfo';
-import { FullAccount } from '../classes/fullAccount';
-import { FilterValues } from '../classes/filterValues';
+import { Account } from '../../classes/account';
+import { AccountInfo } from '../../classes/accountInfo';
+import { FullAccount } from '../../classes/fullAccount';
+import { FilterValues } from '../../classes/filterValues';
 
 @Component({
   selector: 'app-accounts',

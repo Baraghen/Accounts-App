@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { AccountGroup } from '../classes/accountGroup';
+import { AccountGroup } from '../../classes/accountGroup';
 import { MatPaginator } from '@angular/material';
 
 

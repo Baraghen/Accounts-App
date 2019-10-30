@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup} from '@angular/forms';
-import {FilterValues}  from '../classes/filterValues';
-import { Account } from '../classes/account';
+import {FilterValues}  from '../../classes/filterValues';
+
 
 
 @Component({
