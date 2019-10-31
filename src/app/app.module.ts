@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsComponent } from './Components/accounts/accounts.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 //materials
-import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule, MatPaginatorModule } from '@angular/material';
+import { MatTableModule, MatInputModule, MatSortModule, MatDialogModule, MatIconModule, MatButtonModule, MatRadioModule, MatPaginatorModule, MatToolbarModule } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -28,6 +28,7 @@ import { PopUpGroupPickerComponent, CategoryPopup } from './Components/pop-up-gr
 import { AccountOverviewPageComponent } from './Components/account-overview-page/account-overview-page.component';
 import { AccountGroupsComponent } from './Components/account-groups/account-groups.component';
 import { SelectedGroupPageComponent } from './Components/selected-group-page/selected-group-page.component';
+import { BreadcrumbsComponent } from './Components/breadcrumbs/breadcrumbs.component';
 
 
 
@@ -41,7 +42,8 @@ import { SelectedGroupPageComponent } from './Components/selected-group-page/sel
     CategoryPopup,
     AccountOverviewPageComponent,
     AccountGroupsComponent,
-    SelectedGroupPageComponent
+    SelectedGroupPageComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { SelectedGroupPageComponent } from './Components/selected-group-page/sel
     MatGridListModule,
     MatListModule,
     ReactiveFormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatToolbarModule
   ],
   providers: [
     LoaderService,

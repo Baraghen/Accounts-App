@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: AccountsComponent},
   {path: 'account/:id', component: AccountOverviewPageComponent},
   {path: 'account-groups', component: AccountGroupsComponent},
-  {path: 'account-groups/:id', component: SelectedGroupPageComponent}
+  {path: 'account-groups/:title', component: SelectedGroupPageComponent}
 ]
 
 
