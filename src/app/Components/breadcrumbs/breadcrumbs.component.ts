@@ -12,11 +12,15 @@ export class BreadcrumbsComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
-
+  breadCrumbs:BreadCrumb[];
     
     
   ngOnInit() {
     // Här ska det vara kod :)
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+    .pipe(map(() => this.activatedRoute))
+    .pipe(map((route)))
+
   }
 
 }
