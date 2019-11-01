@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountDataService } from '../services/account-data.service';
+import { AccountDataService } from '../../services/account-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { FilterValues } from '../classes/filterValues';
+import { FilterValues } from '../../classes/filterValues';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { FilterValues } from '../classes/filterValues';
 })
 export class AccountOverviewPageComponent implements OnInit {
 
-  constructor(private accountDataService: AccountDataService, private route: ActivatedRoute) { }
+  constructor(private _data: AccountDataService, private route: ActivatedRoute) { }
 
   accountData;
 
@@ -37,7 +37,7 @@ export class AccountOverviewPageComponent implements OnInit {
   d = new Date(1562324951475).toLocaleString('en-SE', this.options);
 
   getData(params?:FilterValues) {
-    this.accountDataService.getAllAccountData(params).subscribe(
+    this._data.getAllAccountData(params).subscribe(
       data => {
         this.accountData = data;
         this.showContent = true;

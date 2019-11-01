@@ -1,0 +1,60 @@
+.tableContainer{
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+
+    .tableBtns{
+        display:flex;
+        justify-content: space-between;
+        .newBtn {
+            padding: 0 15px;
+            border-color: #03a9f4;
+            min-width: 150px;
+            height: 40px;
+            color: #03a9f4;
+            text-transform: uppercase;
+            margin: 10px;
+        }
+        .searchBtn{
+            margin: 10px;
+        }
+    }
+
+
+    table {
+
+        
+        padding: 0 15px;
+
+        th {
+            font-size: 16px;
+        }
+        .mat-column-check{
+            width: 50px !important;
+        }
+        .mat-column-domain {
+            width: 300px !important;
+        }
+        .mat-column-id {
+            width: 100px !important;
+        }
+        .mat-column-isEngage {
+            width: 100px !important;
+        }
+        .mat-column-isExpired {
+            width: 100px !important;
+        }
+        .mat-column-widgetsEnabled {
+            width: 100px !important;
+        }
+        .mat-column-onsiteCampaigns {
+            width: 100px !important;
+        }
+
+        .more_vert {
+            text-align: right;
+            padding-right: 14px;
+        }
+    }
+}

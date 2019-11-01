@@ -9,16 +9,24 @@
 }
 
 .table-container{
-
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    
+    
     .helpButtons{
-        width: 60%;
-        margin: 20px auto;
+        padding: 10px 15px;
+        margin: 10px;
         display: flex;
         justify-content: flex-end;
     }
 
     table{
-        width: 60%;
-        margin: 0 auto 5%;     
+        padding: 0 15px;
+
+        .nameLink:hover {
+            cursor: pointer;
+        }      
     }
 }

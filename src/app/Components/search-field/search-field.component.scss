@@ -1,12 +1,11 @@
 .searchField-container{
-    width: 100%;
     display: flex;
     justify-content: center;
 
   form{
-      width: 60%;
       display: flex;
       flex-direction: column;
+      width: 80%;
 
      .radioBtns{
          display: flex;

@@ -8,6 +8,8 @@ export class Account{
     group: {
         id: string;
         name: string;
+        numberOfAccounts: number;
+        groupAdmins: string[];
     }
 
 }

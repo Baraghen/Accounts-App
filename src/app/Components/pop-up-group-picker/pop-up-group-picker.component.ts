@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { GroupCollection } from '../classes/group-collection';
+import { GroupCollection } from '../../classes/group-collection';
 import { FormBuilder } from '@angular/forms'
 
 @Component({

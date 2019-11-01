@@ -7,7 +7,18 @@
       "isEngage": false,
       "isExpired": true,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/a-group-name",
+        "name": "A group name",
+        "numberOfAccounts": 6,
+        "groupAdmins": [
+          "Abdulla", 
+          "Ann-Christine",
+          "George",
+          "Tabitha"
+        ]
+      }
     },
     {
       "id": 248259,
@@ -15,7 +26,15 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/another-one",
+        "name": "Another one",
+        "numberOfAccounts": 6,
+        "groupAdmins": [
+          "Khaled"
+        ]
+      }
     },
     {
       "id": 293740,
@@ -23,7 +42,17 @@
       "isEngage": false,
       "isExpired": true,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/svenska-kyrkan",
+        "name": "Svenska Kyrkan",
+        "numberOfAccounts": 3,
+        "groupAdmins": [
+          "Adam",
+          "Eva",
+          "Jesus"
+        ]
+      }
     },
     {
       "id": 722237,
@@ -31,7 +60,18 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/TMNT",
+        "name": "TMNT",
+        "numberOfAccounts": 4,
+        "groupAdmins": [
+          "Donatello",
+          "Raphael",
+          "Michelangelo",
+          "Leonardo"
+        ]
+      }
     },
     {
       "id": 132710,
@@ -39,9 +79,16 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": true,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/group1111",
-        "name": "group1111"
+        "name": "group1111",
+        "numberOfAccounts": 24,
+        "groupAdmins": [
+          "Josef", 
+          "Bengt",
+          "Jessica"
+        ]
       }
     },
     {
@@ -50,7 +97,16 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/rörmockeriet",
+        "name": "rörmockeriet",
+        "numberOfAccounts": 2,
+        "groupAdmins": [
+          "Mario",
+          "Luigi"
+        ]
+      }
     },
     {
       "id": 473296,
@@ -58,7 +114,15 @@
       "isEngage": true,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/byggmästaren",
+        "name": "byggmästaren",
+        "numberOfAccounts": 1,
+        "groupAdmins": [
+          "Bob"
+        ]
+      }
     },
     {
       "id": 580023,
@@ -66,7 +130,15 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/läkarna",
+        "name": "läkarna",
+        "numberOfAccounts": 1,
+        "groupAdmins": [
+          "Alban"
+        ]
+      }
     },
     {
       "id": 327045,
@@ -74,7 +146,17 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/sf-bokhandel",
+        "name": "SF Bokhandel",
+        "numberOfAccounts": 3,
+        "groupAdmins": [
+          "Harry",
+          "Hermione",
+          "Ron"
+        ]
+      }
     },
     {
       "id": 518751,
@@ -82,7 +164,17 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/kryddhyllan",
+        "name": "Kryddhyllan",
+        "numberOfAccounts": 10,
+        "groupAdmins": [
+          "Meja",
+          "Rosmarie",
+          "Basil"
+        ]
+      }
     },
     {
       "id": 754605,
@@ -90,7 +182,18 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/underverket",
+        "name": "Underverket",
+        "numberOfAccounts": 2,
+        "groupAdmins": [
+          "Peter",
+          "Bruce",
+          "Diana",
+          "Tor"
+        ]
+      }
     },
     {
       "id": 890918,
@@ -98,7 +201,18 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/gula-sidorna",
+        "name": "Gula Sidorna",
+        "numberOfAccounts": 4,
+        "groupAdmins": [
+          "Homer",
+          "Marge",
+          "Bart",
+          "Lisa"
+        ]
+      }
     },
     {
       "id": 674803,
@@ -106,7 +220,20 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/friends",
+        "name": "friends",
+        "numberOfAccounts": 7,
+        "groupAdmins": [
+          "Ross",
+          "Rachel",
+          "Joey",
+          "Chandler",
+          "Monica",
+          "Phoebe"
+        ]
+      }
     },
     {
       "id": 896916,
@@ -114,7 +241,16 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/kolmården",
+        "name": "kolmården",
+        "numberOfAccounts": 2,
+        "groupAdmins": [
+          "Micke",
+          "Molle"
+        ]
+      }
     },
     {
       "id": 650936,
@@ -122,7 +258,17 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": false,
+      "group": {
+        "id": "shared/GlobalAccountSettings/stall-1",
+        "name": "Stall 1",
+        "numberOfAccounts": 3,
+        "groupAdmins": [
+          "Rocky",
+          "John",
+          "Joseph"
+        ]
+      }
     },
     {
       "id": 968315,
@@ -130,7 +276,20 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/hovleverantör",
+        "name": "Hovleverantör",
+        "numberOfAccounts": 3,
+        "groupAdmins": [
+          "Will",
+          "Phil",
+          "Vivian",
+          "Hilary",
+          "Carlton",
+          "Ashley"
+        ]
+      }
     },
     {
       "id": 473403,
@@ -138,7 +297,15 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/Blossa",
+        "name": "Blossa",
+        "numberOfAccounts": 1,
+        "groupAdmins": [
+          "Nikolaus"
+        ]
+      }
     },
     {
       "id": 651758,
@@ -146,7 +313,17 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
-      "group": null
+      "activeCampaigns": true,
+      "group": {
+        "id": "shared/GlobalAccountSettings/Pixlar",
+        "name": "Pixlar",
+        "numberOfAccounts": 8,
+        "groupAdmins": [
+          "Walle",
+          "Merida",
+          "Mike"
+        ]
+      }
     }
   ],
   "chargebee": [
