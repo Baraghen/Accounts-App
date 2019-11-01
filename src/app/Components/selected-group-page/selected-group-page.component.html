@@ -14,7 +14,7 @@
         
         <ng-container matColumnDef="domain">
             <th mat-header-cell *matHeaderCellDef>Domain</th>
-            <td mat-cell *matCellDef="let object">{{object.domain}}</td>
+            <td mat-cell *matCellDef="let object">{{object.name}}</td>
         </ng-container>
     
         <ng-container matColumnDef="id">
@@ -34,12 +34,12 @@
 
         <ng-container matColumnDef="widgetsEnabled">
             <th mat-header-cell *matHeaderCellDef>Widgets<br>Enabled</th>
-            <td mat-cell *matCellDef="let object">{{object.widgetsEnabled ? 'Yes' : 'No' }}</td>
+            <td mat-cell *matCellDef="let object">{{object.areWidgetsActivated ? 'Yes' : 'No' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="onsiteCampaigns">
             <th mat-header-cell *matHeaderCellDef>Onsite<br>Campaigns</th>
-            <td mat-cell *matCellDef="let object">{{object.onsiteCampaigns ? 'Yes' : 'No' }}</td>
+            <td mat-cell *matCellDef="let object">{{object.activeCampaigns ? 'Yes' : 'No' }}</td>
         </ng-container>
     
         <ng-container matColumnDef="button">
@@ -50,5 +50,5 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-paginator [length]="dataSource.data.length" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>

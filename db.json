@@ -7,6 +7,7 @@
       "isEngage": false,
       "isExpired": true,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/a-group-name",
         "name": "A group name",
@@ -25,6 +26,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/another-one",
         "name": "Another one",
@@ -40,6 +42,7 @@
       "isEngage": false,
       "isExpired": true,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/svenska-kyrkan",
         "name": "Svenska Kyrkan",
@@ -57,6 +60,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/TMNT",
         "name": "TMNT",
@@ -75,6 +79,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": true,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/group1111",
         "name": "group1111",
@@ -92,6 +97,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/rörmockeriet",
         "name": "rörmockeriet",
@@ -108,6 +114,7 @@
       "isEngage": true,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/byggmästaren",
         "name": "byggmästaren",
@@ -123,6 +130,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/läkarna",
         "name": "läkarna",
@@ -138,6 +146,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/sf-bokhandel",
         "name": "SF Bokhandel",
@@ -155,6 +164,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/kryddhyllan",
         "name": "Kryddhyllan",
@@ -172,6 +182,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/underverket",
         "name": "Underverket",
@@ -190,6 +201,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/gula-sidorna",
         "name": "Gula Sidorna",
@@ -208,6 +220,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/friends",
         "name": "friends",
@@ -228,6 +241,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/kolmården",
         "name": "kolmården",
@@ -244,6 +258,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/stall-1",
         "name": "Stall 1",
@@ -261,6 +276,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/hovleverantör",
         "name": "Hovleverantör",
@@ -281,6 +297,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/Blossa",
         "name": "Blossa",
@@ -296,6 +313,7 @@
       "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
+      "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/Pixlar",
         "name": "Pixlar",
