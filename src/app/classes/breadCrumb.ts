@@ -1,4 +1,5 @@
-export interface BreadCrumb{
+export class BreadCrumb{
     label: string;
     url: string;
+    params: {};
 }

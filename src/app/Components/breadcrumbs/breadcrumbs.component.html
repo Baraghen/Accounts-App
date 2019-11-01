@@ -1,4 +1,8 @@
 <mat-toolbar>
-    
+    <ul *ngFor="let bread of breadCrumbs">
+        <li>
+            {{bread.label}}
+        </li>
+    </ul>
 
 </mat-toolbar>

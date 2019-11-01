@@ -7,10 +7,10 @@ import { SelectedGroupPageComponent } from './Components/selected-group-page/sel
 
 
 const routes: Routes = [
-  {path: '', component: AccountsComponent},
-  {path: 'account/:id', component: AccountOverviewPageComponent},
-  {path: 'account-groups', component: AccountGroupsComponent},
-  {path: 'account-groups/:title', component: SelectedGroupPageComponent}
+  {path: '', component: AccountsComponent, data:{ breadCrumb: 'Admin' }},
+  {path: 'account/:id', component: AccountOverviewPageComponent, data:{ breadCrumb: 'Account '}},
+  {path: 'account-groups', component: AccountGroupsComponent, data:{ breadCrumb: 'Account-groups' }},
+  {path: 'account-groups/:title', component: SelectedGroupPageComponent, data:{ breadCrumb: 'Group: ' }}
 ]
 
 

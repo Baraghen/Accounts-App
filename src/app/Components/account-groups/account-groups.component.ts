@@ -33,7 +33,6 @@ export class AccountGroupsComponent implements OnInit {
           el.hidden = false;
         });
         this.dataSource.paginator = this.paginator;
-        console.log(this.dataSource.data)
         
       }
     )
@@ -42,9 +41,10 @@ export class AccountGroupsComponent implements OnInit {
   hidden: boolean;
 
   ngOnInit() {
-
+    
     this.getData()
-
+   
+    
   }
 
 }
