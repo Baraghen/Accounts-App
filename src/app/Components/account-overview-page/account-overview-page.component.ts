@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountDataService } from '../services/account-data.service';
+import { AccountDataService } from '../../services/account-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { FilterValues } from '../classes/filterValues';
+import { FilterValues } from '../../classes/filterValues';
 
 
 @Component({

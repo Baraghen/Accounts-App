@@ -4,7 +4,9 @@
     <h2> {{errorMessage}} </h2>
  </div>
 
- <div class="table-container" *ngIf="dataSource">
+ <button routerLink='account-groups'>account-groups</button>
+ 
+ <div class="table-container mat-elevation-z8" *ngIf="dataSource" >
 
     <div class="helpButtons">
         <button mat-button (click)=toggleForm() matTooltip="Filter form"  matTooltipPosition="above"><mat-icon aria-hidden="false">search</mat-icon></button>
@@ -13,7 +15,7 @@
 
     <app-search-field *ngIf="!hide" (filterEvent)="receiveFilterValues($event)"></app-search-field>
 
-        <table mat-table matSort *ngIf="showTable" [dataSource]="dataSource" class="mat-elevation-z8 dataTable">
+        <table mat-table matSort *ngIf="showTable" [dataSource]="dataSource" class="dataTable">
 
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Id</th>
@@ -22,7 +24,11 @@
         
             <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Name</th>
+<<<<<<< HEAD:src/app/accounts/accounts.component.html
                 <td mat-cell *matCellDef="let fullAccount" (click)="onSelect(fullAccount.account)"> <button mat-button>{{fullAccount.account.name}}</button></td>
+=======
+                <td mat-cell *matCellDef="let fullAccount" (click)="onSelect(fullAccount.account)" class="nameLink"><button mat-button>{{fullAccount.account.name}}</button></td>
+>>>>>>> accountGroups:src/app/Components/accounts/accounts.component.html
             </ng-container>
         
             <ng-container matColumnDef="isEngage">
@@ -69,6 +75,8 @@
             <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
             
         </table>
+
+        <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     
 </div>
 
