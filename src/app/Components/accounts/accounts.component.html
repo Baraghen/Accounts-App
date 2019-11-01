@@ -24,7 +24,7 @@
         
             <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Name</th>
-                <td mat-cell *matCellDef="let fullAccount" (click)="onSelect(fullAccount.account)" class="nameLink"> <button mat-button>{{fullAccount.account.name}}</button></td>
+                <td mat-cell *matCellDef="let fullAccount" (click)="onSelect(fullAccount.account)" class="nameLink"><button mat-button>{{fullAccount.account.name}}</button></td>
             </ng-container>
         
             <ng-container matColumnDef="isEngage">
