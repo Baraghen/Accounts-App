@@ -2,16 +2,17 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 import { ChangeDetectorRef } from "@angular/core";
 // Materials
 import { MatSort } from '@angular/material';
+import { MatPaginator } from '@angular/material';
 import { MatTableDataSource } from '@angular/material/table'
 // Service
-import { AccountDataService } from '../services/account-data.service';
+import { AccountDataService } from '../../services/account-data.service';
 // Router
 import { Router } from '@angular/router';
 // Classes
-import { Account } from '../classes/account';
-import { AccountInfo } from '../classes/accountInfo';
-import { FullAccount } from '../classes/fullAccount';
-import { FilterValues } from '../classes/filterValues';
+import { Account } from '../../classes/account';
+import { AccountInfo } from '../../classes/accountInfo';
+import { FullAccount } from '../../classes/fullAccount';
+import { FilterValues } from '../../classes/filterValues';
 
 @Component({
   selector: 'app-accounts',
@@ -43,6 +44,8 @@ export class AccountsComponent implements OnInit{
     this.sort = ms;
     this.setDataSourceAttributes();
   }
+
+  @ViewChild(MatPaginator, {static:false}) paginator: MatPaginator;
   
   setDataSourceAttributes() {
     if (this.dataSource) {
@@ -88,6 +91,8 @@ export class AccountsComponent implements OnInit{
           this.showTable = true;
           
           this.dataSource = new MatTableDataSource(arr);
+          this.dataSource.paginator = this.paginator;
+          
           this.dataSource.sortingDataAccessor = (item, property) => {
             switch (property) {
               case 'id': return item.account.id;
