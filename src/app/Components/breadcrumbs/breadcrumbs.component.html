@@ -1,8 +1,10 @@
 <mat-toolbar>
-    <ul *ngFor="let bread of breadCrumbs">
-        <li>
-            {{bread.label}}
+    <ol class='breadcrumb'>
+        <li *ngFor='let breadcrumb of breadCrumbs'>
+            <a [routerLink]='[breadcrumb.url, breadcrumb.params]' routerLinkActive='active'>{{ breadcrumb.label }}</a>
         </li>
-    </ul>
-
+    </ol>
 </mat-toolbar>
+
+
+<!-- [routerLink]='[breadcrumb.url, breadcrumb.params]' -->

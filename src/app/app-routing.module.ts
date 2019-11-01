@@ -7,10 +7,74 @@ import { SelectedGroupPageComponent } from './Components/selected-group-page/sel
 
 
 const routes: Routes = [
-  {path: '', component: AccountsComponent, data:{ breadCrumb: 'Admin' }},
-  {path: 'account/:id', component: AccountOverviewPageComponent, data:{ breadCrumb: 'Account '}},
-  {path: 'account-groups', component: AccountGroupsComponent, data:{ breadCrumb: 'Account-groups' }},
-  {path: 'account-groups/:title', component: SelectedGroupPageComponent, data:{ breadCrumb: 'Group: ' }}
+  {
+    path: '', 
+    component: AccountsComponent, 
+    data: { 
+      // title: 'Admin',
+      breadCrumb: [
+        {
+          label: 'Admin',
+          url: ''
+        }
+      ] 
+    },
+  },
+  {
+    path: 'account/:id',
+    component: AccountOverviewPageComponent,
+    data: { 
+      // title: 'Account',
+      breadCrumb: [
+        {
+          label: 'Admin',
+          url: ''
+        },
+        {
+          label: 'Account',
+          url: '/account/:id'
+        }
+      ] 
+    },
+  },
+  {
+    path: 'account-groups', 
+    component: AccountGroupsComponent, 
+    data: {
+      // title: 'Account Groups',
+      breadCrumb: [
+        {
+          label: 'Admin',
+          url: ''
+        },
+        {
+          label: 'Account Groups',
+          url: '/account/account-groups'
+        }
+      ]
+    },
+  },
+  {
+    path: 'account-groups/:id', 
+    component: SelectedGroupPageComponent, 
+    data: { 
+      // title: 'Group: ',
+      breadCrumb: [
+        {
+          label: 'Admin',
+          url: '/'
+        },
+        {
+          label: 'Account Groups',
+          url: '/account/account-groups'
+        },
+        {
+          label: 'Group: ',
+          url: '/account/account-groups/:id'
+        }
+        ]
+    },
+  }
 ]
 
 

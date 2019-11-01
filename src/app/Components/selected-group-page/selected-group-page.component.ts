@@ -1,9 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material';
-import { SelectedAccountGroup } from '../../classes/selectedAccountGroup';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { AccountDataService } from '../../services/account-data.service';
+import { FilterValues } from '../../classes/filterValues';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SelectedGroupPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private route: ActivatedRoute, private _data: AccountDataService) { }
 
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
 
@@ -21,20 +20,30 @@ export class SelectedGroupPageComponent implements OnInit {
 
   displayedColumns: string[] = ['check','domain','id', 'isEngage', 'isExpired', 'widgetsEnabled', 'onsiteCampaigns', 'button'];
 
-  selectedAccountGroup: SelectedAccountGroup[] = [
-    {domain: 'idealofsweden.se', id: 12345, isEngage: true, isExpired: true, widgetsEnabled: true, onsiteCampaigns: true},
-    {domain: 'idealofsweden.de', id: 12345, isEngage: false, isExpired: true, widgetsEnabled: true, onsiteCampaigns: true},
-    {domain: 'idealofsweden.be', id: 12345, isEngage: true, isExpired: true, widgetsEnabled: false, onsiteCampaigns: true},
-    {domain: 'idealofsweden.no', id: 12345, isEngage: true, isExpired: false, widgetsEnabled: true, onsiteCampaigns: true},
-  ];
-
   dataSource;
+
+  getData(params?:FilterValues) {
+    this._data.getAllAccountData(params).subscribe(
+      data => {
+        let objFinal = [Object.assign(data[0][0], data[1][0])]
+        this.dataSource = new MatTableDataSource(objFinal);
+        this.dataSource.paginator = this.paginator;
+      }
+    )
+  }
 
   ngOnInit() {
 
-    this.dataSource = new MatTableDataSource(this.selectedAccountGroup);
-    
-    this.dataSource.paginator = this.paginator;
+    let id = parseInt(this.route.snapshot.paramMap.get('id'));
 
+    let filterValues:FilterValues = {
+      account: {
+        id: id
+      },
+      info: {
+        site_id: id
+      } 
+    }
+    this.getData(filterValues)
   }
 }

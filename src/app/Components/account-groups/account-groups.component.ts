@@ -18,7 +18,7 @@ export class AccountGroupsComponent implements OnInit {
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
 
   onSelect(account) {
-    this.router.navigate(['/account-groups', account.group.name]);
+    this.router.navigate(['/account-groups', account.id]);
   }
 
   displayedColumns: string[] = ['check','title','accounts', 'admins', 'button'];
