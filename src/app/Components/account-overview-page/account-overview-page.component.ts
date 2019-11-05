@@ -14,6 +14,7 @@ export class AccountOverviewPageComponent implements OnInit {
   constructor(private _data: AccountDataService, private route: ActivatedRoute) { }
 
   accountData;
+  routeData;
 
   showContent:boolean = false;
 
@@ -59,7 +60,11 @@ export class AccountOverviewPageComponent implements OnInit {
       
     }
 
-    this.getData(filterValues)
+    this.getData(filterValues);
+
+    //changes route data
+    let nameID = this.route.snapshot.paramMap.get('id');
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[1].label = 'Account: '  + nameID);
 
   }
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { AccountsComponent } from './Components/accounts/accounts.component';
 import { AccountOverviewPageComponent } from './Components/account-overview-page/account-overview-page.component';
 import { AccountGroupsComponent } from './Components/account-groups/account-groups.component';
@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '', 
     component: AccountsComponent, 
     data: { 
-      // title: 'Admin',
+      title: 'Admin',
       breadCrumb: [
         {
           label: 'Admin',
@@ -24,14 +24,14 @@ const routes: Routes = [
     path: 'account/:id',
     component: AccountOverviewPageComponent,
     data: { 
-      // title: 'Account',
+      title: 'Account',
       breadCrumb: [
         {
           label: 'Admin',
           url: ''
         },
         {
-          label: 'Account',
+          label: ' ',
           url: '/account/:id'
         }
       ] 
@@ -41,7 +41,7 @@ const routes: Routes = [
     path: 'account-groups', 
     component: AccountGroupsComponent, 
     data: {
-      // title: 'Account Groups',
+      title: 'Account Groups',
       breadCrumb: [
         {
           label: 'Admin',
@@ -49,7 +49,7 @@ const routes: Routes = [
         },
         {
           label: 'Account Groups',
-          url: '/account/account-groups'
+          url: 'account-groups'
         }
       ]
     },
@@ -58,19 +58,19 @@ const routes: Routes = [
     path: 'account-groups/:id', 
     component: SelectedGroupPageComponent, 
     data: { 
-      // title: 'Group: ',
+      title: 'Group: ',
       breadCrumb: [
         {
           label: 'Admin',
-          url: '/'
+          url: ''
         },
         {
           label: 'Account Groups',
-          url: '/account/account-groups'
+          url: 'account-groups'
         },
         {
-          label: 'Group: ',
-          url: '/account/account-groups/:id'
+          label: ' ' ,
+          url: 'account-groups/:id'
         }
         ]
     },
@@ -82,4 +82,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

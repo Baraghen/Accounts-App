@@ -1,0 +1,19 @@
+mat-toolbar{
+    ol{
+        display:flex;
+        flex-direction: row;
+        list-style-type: none;
+
+        li{
+            #linkCrumb{
+                text-align: center;
+                text-decoration: none;
+                color: gray;
+                mat-icon{
+                    transform: translateY(25%);
+                }
+            }
+            
+        }
+    }
+}

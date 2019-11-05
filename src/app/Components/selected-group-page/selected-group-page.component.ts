@@ -22,6 +22,8 @@ export class SelectedGroupPageComponent implements OnInit {
 
   dataSource;
 
+  routeData;
+
   getData(params?:FilterValues) {
     this._data.getAllAccountData(params).subscribe(
       data => {
@@ -45,5 +47,9 @@ export class SelectedGroupPageComponent implements OnInit {
       } 
     }
     this.getData(filterValues)
+    
+    //changes route data
+    let nameID = this.route.snapshot.paramMap.get('id');
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].label = 'Group: '  + nameID);
   }
 }
