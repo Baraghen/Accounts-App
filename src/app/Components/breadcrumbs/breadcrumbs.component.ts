@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { BreadCrumb } from '../../classes/breadCrumb';
+import { Component, OnInit} from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute, RouterEvent, PRIMARY_OUTLET } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 
@@ -13,7 +12,7 @@ export class BreadcrumbsComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   breadCrumbs;
-    
+
   ngOnInit() {
     
 
@@ -38,11 +37,9 @@ export class BreadcrumbsComponent implements OnInit {
       this.breadCrumbs.push({
         url: url,
         label: label,
-        params: params
       });
       
     });
-
 
   }
 

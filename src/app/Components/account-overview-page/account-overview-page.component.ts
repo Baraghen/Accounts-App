@@ -64,7 +64,7 @@ export class AccountOverviewPageComponent implements OnInit {
 
     //changes route data
     let nameID = this.route.snapshot.paramMap.get('id');
-    this.routeData = this.route.data.subscribe(route => route.breadCrumb[1].label = 'Account: '  + nameID);
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[1].param = nameID);
 
   }
 

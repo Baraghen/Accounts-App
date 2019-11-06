@@ -31,7 +31,8 @@ const routes: Routes = [
           url: ''
         },
         {
-          label: ' ',
+          label: 'Account: ',
+          param: '',
           url: '/account/:id'
         }
       ] 
@@ -69,7 +70,8 @@ const routes: Routes = [
           url: 'account-groups'
         },
         {
-          label: ' ' ,
+          label: 'Group: ' ,
+          param: '',
           url: 'account-groups/:id'
         }
         ]

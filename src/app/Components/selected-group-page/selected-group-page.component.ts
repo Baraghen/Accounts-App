@@ -50,6 +50,6 @@ export class SelectedGroupPageComponent implements OnInit {
     
     //changes route data
     let nameID = this.route.snapshot.paramMap.get('id');
-    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].label = 'Group: '  + nameID);
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].param = nameID);
   }
 }

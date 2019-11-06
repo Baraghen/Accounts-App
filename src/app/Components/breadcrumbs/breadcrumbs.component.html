@@ -1,9 +1,11 @@
     <mat-toolbar>
         <ol *ngFor='let breadcrumb of breadCrumbs'>
             <li *ngFor="let crumb of breadcrumb.label, let i = index">
-                <a *ngIf="i == breadcrumb.label.length -1" id="lastCrumb">{{crumb.label}}</a>
+                <a *ngIf="i == breadcrumb.label.length -1 && crumb.param" id="lastCrumb"><span class="gray">{{crumb.label}}</span>{{crumb.param}}</a>
+                <a *ngIf="i == breadcrumb.label.length -1 && !crumb.param" id="lastCrumb">{{crumb.label}}</a>
                 <a *ngIf='i !== breadcrumb.label.length -1' [routerLink]='[crumb.url]' routerLinkActive='active' id="linkCrumb">{{crumb.label}}<mat-icon>chevron_right</mat-icon></a>
             </li>
         </ol>
     </mat-toolbar>
 
+    <div id="lastCrumb"></div>
