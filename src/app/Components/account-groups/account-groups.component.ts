@@ -18,7 +18,7 @@ export class AccountGroupsComponent implements OnInit {
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
 
   onSelect(account) {
-    this.router.navigate(['/account-groups', account.id]);
+    this.router.navigate(['/account-groups', account.group.name]);
   }
 
   displayedColumns: string[] = ['check','title','accounts', 'admins', 'button'];
@@ -41,9 +41,10 @@ export class AccountGroupsComponent implements OnInit {
   hidden: boolean;
 
   ngOnInit() {
-
+    
     this.getData()
-
+   
+    
   }
 
 }

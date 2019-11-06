@@ -22,13 +22,14 @@ export class SelectedGroupPageComponent implements OnInit {
 
   dataSource;
 
+  routeData;
+
   getData(params?:FilterValues) {
     this._data.getAllAccountData(params).subscribe(
       data => {
         let objFinal = [Object.assign(data[0][0], data[1][0])]
         this.dataSource = new MatTableDataSource(objFinal);
         this.dataSource.paginator = this.paginator;
-        console.log(this.dataSource.data)
       }
     )
   }
@@ -46,5 +47,9 @@ export class SelectedGroupPageComponent implements OnInit {
       } 
     }
     this.getData(filterValues)
+    
+    //changes route data
+    let nameID = this.route.snapshot.paramMap.get('id');
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].param = nameID);
   }
 }
