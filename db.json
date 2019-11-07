@@ -94,7 +94,7 @@
     {
       "id": 566097,
       "name": "No widget",
-      "isEngage": false,
+      "isEngage": true,
       "isExpired": false,
       "areWidgetsActivated": false,
       "activeCampaigns": false,

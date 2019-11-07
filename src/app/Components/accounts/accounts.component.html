@@ -6,7 +6,7 @@
  
  <button routerLink='account-groups' mat-raised-button color="primary" id="accBtn">account-groups</button>
  
- <div class="table-container mat-elevation-z8" *ngIf="dataSource" >
+ <div class="table-container mat-elevation-z8" *ngIf="dataSource && showTable" >
 
     <div class="helpButtons">
         <button mat-button (click)=toggleForm() matTooltip="Filter form"  matTooltipPosition="above"><mat-icon aria-hidden="false">search</mat-icon></button>
@@ -15,7 +15,7 @@
 
     <app-search-field *ngIf="!hide" (filterEvent)="receiveFilterValues($event)"></app-search-field>
 
-        <table mat-table matSort *ngIf="showTable" [dataSource]="dataSource" class="dataTable">
+        <table mat-table matSort [dataSource]="dataSource" class="dataTable">
 
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Id</th>
