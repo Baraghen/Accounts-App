@@ -1,4 +1,4 @@
-    <mat-toolbar>
+    <mat-toolbar class="mat-elevation-z8">
         <ol *ngFor='let breadcrumb of breadCrumbs'>
             <li *ngFor="let crumb of breadcrumb.label, let i = index">
                 <a *ngIf="i == breadcrumb.label.length -1 && crumb.param" id="lastCrumb"><span class="gray">{{crumb.label}}</span>{{crumb.param}}</a>

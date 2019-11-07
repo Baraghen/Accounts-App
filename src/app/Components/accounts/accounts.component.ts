@@ -117,12 +117,10 @@ export class AccountsComponent implements OnInit{
 
 
   updateAccount(account: Account){
-    console.log(account);
     this.accountDataService.updateAccount(account).subscribe();
   }
 
   updateAccountInfo(account: AccountInfo){
-    console.log(account);
     this.accountDataService.updateAccountInfo(account).subscribe();
   }
 

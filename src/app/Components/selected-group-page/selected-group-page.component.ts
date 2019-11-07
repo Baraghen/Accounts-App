@@ -63,7 +63,6 @@ export class SelectedGroupPageComponent implements OnInit {
   }
 
   updateAccount(account: Account){
-    console.log(account);
     this._data.updateAccount(account).subscribe();
   }
 

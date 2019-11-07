@@ -8,7 +8,7 @@ mat-toolbar{
             #linkCrumb{
                 text-align: center;
                 text-decoration: none;
-                color: gray;
+                color: rgba(0, 0, 0, 0.651);
                 
                 mat-icon{
                     transform: translateY(25%);
@@ -16,7 +16,7 @@ mat-toolbar{
             }
             #lastCrumb{
                 .gray{
-                    color: gray;
+                    color: rgba(0, 0, 0, 0.651);
                 }
                 
             }

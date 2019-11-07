@@ -1,3 +1,7 @@
+#accBtn{
+    position: fixed;
+    margin: 20px;
+}
 #errorContainer{
     text-align: center;
 
@@ -10,7 +14,7 @@
 
 .table-container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
     display:flex;
     flex-direction: column;
     

@@ -217,7 +217,7 @@
     {
       "id": 674803,
       "name": "tb-dev-cosmos-test",
-      "isEngage": false,
+      "isEngage": true,
       "isExpired": false,
       "areWidgetsActivated": true,
       "activeCampaigns": true,
