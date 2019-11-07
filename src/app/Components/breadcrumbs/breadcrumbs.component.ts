@@ -32,7 +32,6 @@ export class BreadcrumbsComponent implements OnInit {
       let url = snapshot.url;
       let routeData = route.snapshot.data;
       let label = routeData['breadCrumb'];
-      let params = snapshot.root.params;
 
       this.breadCrumbs.push({
         url: url,

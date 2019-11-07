@@ -1,19 +1,19 @@
-{ 
-  "error": {}, 
+{
+  "error": {},
   "data": [
     {
       "id": 411988,
       "name": "tb data 5",
-      "isEngage": false,
+      "isEngage": true,
       "isExpired": true,
-      "areWidgetsActivated": false,
-      "activeCampaigns": true,
+      "areWidgetsActivated": true,
+      "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/a-group-name",
         "name": "A group name",
         "numberOfAccounts": 6,
         "groupAdmins": [
-          "Abdulla", 
+          "Abdulla",
           "Ann-Christine",
           "George",
           "Tabitha"
@@ -57,8 +57,8 @@
     {
       "id": 722237,
       "name": "disabled",
-      "isEngage": false,
-      "isExpired": false,
+      "isEngage": true,
+      "isExpired": true,
       "areWidgetsActivated": false,
       "activeCampaigns": true,
       "group": {
@@ -78,14 +78,14 @@
       "name": "tb-dev-test.triggerbee.com",
       "isEngage": false,
       "isExpired": false,
-      "areWidgetsActivated": true,
+      "areWidgetsActivated": false,
       "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/group1111",
         "name": "group1111",
         "numberOfAccounts": 24,
         "groupAdmins": [
-          "Josef", 
+          "Josef",
           "Bengt",
           "Jessica"
         ]
@@ -111,7 +111,7 @@
     {
       "id": 473296,
       "name": "Chargebee",
-      "isEngage": true,
+      "isEngage": false,
       "isExpired": false,
       "areWidgetsActivated": false,
       "activeCampaigns": false,
@@ -144,7 +144,7 @@
       "id": 327045,
       "name": "cookie-test.triggerbee.com",
       "isEngage": false,
-      "isExpired": false,
+      "isExpired": true,
       "areWidgetsActivated": false,
       "activeCampaigns": false,
       "group": {
@@ -163,7 +163,7 @@
       "name": "tb-dev-spa.triggerbee.com",
       "isEngage": false,
       "isExpired": false,
-      "areWidgetsActivated": false,
+      "areWidgetsActivated": true,
       "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/kryddhyllan",
@@ -180,8 +180,8 @@
       "id": 754605,
       "name": "Shard test 2",
       "isEngage": false,
-      "isExpired": false,
-      "areWidgetsActivated": false,
+      "isExpired": true,
+      "areWidgetsActivated": true,
       "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/underverket",
@@ -199,7 +199,7 @@
       "id": 890918,
       "name": "Shard test 3",
       "isEngage": false,
-      "isExpired": false,
+      "isExpired": true,
       "areWidgetsActivated": false,
       "activeCampaigns": false,
       "group": {
@@ -219,7 +219,7 @@
       "name": "tb-dev-cosmos-test",
       "isEngage": false,
       "isExpired": false,
-      "areWidgetsActivated": false,
+      "areWidgetsActivated": true,
       "activeCampaigns": true,
       "group": {
         "id": "shared/GlobalAccountSettings/friends",
@@ -239,8 +239,8 @@
       "id": 896916,
       "name": "sebbes cosmosdb test",
       "isEngage": false,
-      "isExpired": false,
-      "areWidgetsActivated": false,
+      "isExpired": true,
+      "areWidgetsActivated": true,
       "activeCampaigns": false,
       "group": {
         "id": "shared/GlobalAccountSettings/kolmården",
@@ -273,7 +273,7 @@
     {
       "id": 968315,
       "name": "tb-data2",
-      "isEngage": false,
+      "isEngage": true,
       "isExpired": false,
       "areWidgetsActivated": false,
       "activeCampaigns": true,
@@ -431,6 +431,7 @@
       ]
     },
     {
+      "id": 566097,
       "account_id": "1351521",
       "account_number": "1351521",
       "site_id": "566097",
@@ -1298,6 +1299,7 @@
       "apiKeys": []
     },
     {
+      "id": 327045,
       "account_id": "2443633",
       "account_number": "2443633",
       "site_id": "327045",
@@ -1488,6 +1490,7 @@
       "apiKeys": []
     },
     {
+      "id": 248259,
       "account_id": "2637992",
       "account_number": "2637992",
       "site_id": "248259",
@@ -1506,7 +1509,7 @@
       "client_script": "console.log(\"a\");",
       "pre_trackingscript": null,
       "is_engage": false,
-      "has_consent": true,
+      "has_consent": false,
       "paused": false,
       "expired": false,
       "expireDate": null,
@@ -1523,6 +1526,7 @@
       ]
     },
     {
+      "id": 896916,
       "account_id": "266808",
       "account_number": "266808",
       "site_id": "896916",
@@ -1754,6 +1758,7 @@
       "apiKeys": []
     },
     {
+      "id": 580023,
       "account_id": "317190",
       "account_number": "317190",
       "site_id": "580023",
@@ -2076,6 +2081,7 @@
       "apiKeys": []
     },
     {
+      "id": 518751,
       "account_id": "3831975",
       "account_number": "3831975",
       "site_id": "518751",
@@ -2102,8 +2108,8 @@
       "client_script": "",
       "pre_trackingscript": null,
       "is_engage": false,
-      "has_consent": false,
-      "paused": false,
+      "has_consent": true,
+      "paused": true,
       "expired": false,
       "expireDate": null,
       "scheduledRemoval": null,
@@ -2646,6 +2652,7 @@
       "apiKeys": []
     },
     {
+      "id": 132710,
       "account_id": "4854744",
       "account_number": "4854744",
       "site_id": "132710",
@@ -2813,7 +2820,7 @@
       "client_script": "﻿window.mtr_consent_settings = {\"siteId\":132710};\r\nwindow.mtr_consent_settings.widgets = [{\"id\":925525599,\"translations\":{\"en\":{\"widgetUrl\":\"https://dev-privacypolicy.trgr.be/widget/132710/en.html\",\"privacyPolicyUrl\":\"https://dev-privacypolicy.trgr.be/gpp/132710/19/2020-07-10-en.html\"}},\"position\":\"bottom\",\"layoutName\":\"sidebar\",\"showOnPageLoad\":true,\"versionDate\":\"2020-07-10T00:00:00\",\"revisionNumber\":19}];var MtrConsent,MtrConsent,MtrConsent,MtrConsent;if(function(t){function e(){}t.Settings=e;function i(){}t.Widget=i;function n(){}t.Translation=n;function o(t){this.widgetId=t}t.WidgetState=o;function s(){}t.SiteSettings=s}(MtrConsent=MtrConsent||{}),function(t){var e=(i.prototype.getCookie=function(t){for(var e=document.cookie.split(\";\"),i=0,n=e.length;i<n;i++)if(e[i].match(new RegExp(\"\\\\b\"+t+\"=\")))return decodeURIComponent(e[i].split(t+\"=\")[1]);return\"\"},i.prototype.setCookie=function(t,e,i){var n=new Date;n.setTime(n.getTime()+24*i*60*60*1e3);var o=\"; expires=\";o+=i?n.toUTCString():\"0\",document.cookie=t+\"=\"+e+o+\"; path=/;domain=.\"+location.hostname.replace(/^www\\./i,\"\")+\";\"},i.prototype.httpGet=function(t,e){var i=this.getXMLHttpRequest();i.open(\"GET\",t,!0),i.onreadystatechange=function(){4==i.readyState&&200==i.status&&e(i.responseText)},i.send()},i.prototype.getXMLHttpRequest=function(){return XMLHttpRequest?new XMLHttpRequest:new ActiveXObject(\"MSXML2.XMLHTTP.3.0\")},i.prototype.eventListener=function(t,e,i){t.addEventListener?t.addEventListener(e,i,!1):t.attachEvent(\"on\"+e,function(){return i.call(t,window.event)})},i.prototype.triggerEvent=function(t,e){if(document.createEvent){var i=document.createEvent(\"Events\");i.detail=e,i.initEvent(t,!0,!0),document.dispatchEvent(i)}},i);function i(){}t.Utilities=e}(MtrConsent=MtrConsent||{}),function(n){var t=(e.prototype.addOrUpdate=function(t,e){var i=this.get(t);i?this.remove(i.widgetId):i=new n.WidgetState(t),i.onReadCallback=e,this.states.push(i)},e.prototype.get=function(e){return this.states.filter(function(t){return t.widgetId===e})[0]},e.prototype.remove=function(t){for(var e=0;e<this.states.length;e++)if(this.states[e]){this.states.splice(e,1);break}},e);function e(){this.states=new Array}n.WidgetStateService=t}(MtrConsent=MtrConsent||{}),function(MtrConsent){var WidgetScript=function(){function WidgetScript(t){if(this.settings=t,this.utilities=new MtrConsent.Utilities,this.widgetStateService=new MtrConsent.WidgetStateService,this.widgetElementId=\"mtr-consent\",this.eventPrefix=\"visitedpage-\",!this.settings)throw Error(\"Settings is null\");if(!this.settings.widgets)throw Error(\"No widgets found\");this.mtr=window.mtr||{log:function(){},goal:function(){},getVisit:function(){},setVisit:function(){}};for(var e=0,i=this.settings.widgets;e<i.length;e++){var n=i[e];this.init(n)}}return WidgetScript.prototype.getClosedWidgetCookieName=function(t,e){return this.widgetElementId+\"-closed-\"+t+\"-\"+e},WidgetScript.prototype.getCancelledWidgetCookieName=function(t,e){return this.widgetElementId+\"-cancelled-\"+t+\"-\"+e},WidgetScript.prototype.getQueryStringValue=function(t){return decodeURIComponent(window.location.search.replace(new RegExp(\"^(?:.*[&\\\\?]\"+encodeURIComponent(t).replace(/[\\.\\+\\*]/g,\"\\\\$&\")+\"(?:\\\\=([^&]*))?)?.*$\",\"i\"),\"$1\"))},WidgetScript.prototype.getSiteSettings=function(){var t=window.mtr_consent_site_settings;return t||new MtrConsent.SiteSettings},WidgetScript.prototype.getLanguage=function(){var t=this.getSiteSettings(),e=null;return t.language&&(e=t.language),!e&&document.documentElement.lang&&(e=document.documentElement.lang.split(\"-\")[0]),e},WidgetScript.prototype.getTranslation=function(t){var e=null,i=this.getLanguage();return i&&(e=t.translations[i]),e=e||t.translations[Object.keys(t.translations)[0]]},WidgetScript.prototype.init=function(t){var e=\"open-consent-widget\"===this.getQueryStringValue(\"dev\"),i=\"open-consent-policy\"===this.getQueryStringValue(\"dev\"),n=e||i,o=this.shouldBeOpenedOnInit(t),s=this.mtr.getVisit()||{};if(s.logAccepted){var r=this.getMtrCustom(t);r=this.setMtrCustomSessionProperty(r,\"pp_accepted_title\",document.title),r=this.setMtrCustomSessionProperty(r,\"pp_accepted_url\",window.location),this.setMtrCustom(r),this.mtr.goal(this.eventPrefix+\"Accepted Privacy Policy\"),s.logAccepted=!1,this.mtr.setVisit(s)}(n||o)&&(i?this.open(\"policy\"):this.openInternal(t),o&&(s.logAccepted=!0,this.mtr.setVisit(s),this.markAsClosed(t.id,!1)))},WidgetScript.prototype.shouldBeOpenedOnInit=function(t){return!document.getElementById(this.widgetElementId)&&(!this.isWidgetClosed(t.id)&&(!!t.showOnPageLoad&&!this.getSiteSettings().disableOnPageLoad))},WidgetScript.prototype.open=function(t){var e=this.settings.widgets[0];if(e){var i=this;this.openInternal(e,function(){t&&i.setStep(t)})}},WidgetScript.prototype.openInternal=function(t,e){void 0===e&&(e=null);var i=document.getElementById(this.widgetElementId);null!=i&&i.remove();var n=document.createElement(\"div\");n.id=this.widgetElementId,t.position&&n.classList.add(\"position-\"+t.position.toLowerCase().replace(/ /g,\"\"));var o=this.getTranslation(t);this.utilities.httpGet(o.widgetUrl,function(t){n.innerHTML=t,document.body.appendChild(n),e&&e()}),this.openWidgetId=t.id},WidgetScript.prototype.openWithCallback=function(t,e,i){this.widgetStateService.addOrUpdate(t.id,e);var n=this;this.openInternal(t,function(){i&&n.setStep(i)})},WidgetScript.prototype.close=function(){var t=document.getElementById(this.widgetElementId);t.parentNode.removeChild(t),this.markAsClosed(this.openWidgetId,!0)},WidgetScript.prototype.cancel=function(){var t=document.getElementById(this.widgetElementId);t.parentNode.removeChild(t),this.markAsCancelled(this.openWidgetId)},WidgetScript.prototype.setStep=function(t){for(var e=document.getElementById(\"consent-container\"),i=e.getElementsByClassName(\"step\"),n=0;n<i.length;n++){i[n].classList.remove(\"step-active\")}if(t){-1===t.indexOf(\"step-\")&&(t=\"step-\"+t);var o=e.querySelector('[data-step=\"'+t+'\"]');if(null==o)throw new Error(\"No data-step found by the value '\"+t+\"'\");o.classList.add(\"step-active\"),o.classList.add(\"fade-in\");var s=o.getElementsByTagName(\"iframe\");for(n=0;n<s.length;n++){var r=s[n];if(r){var d=r.getAttribute(\"data-src\");d&&(r.setAttribute(\"src\",d),r.removeAttribute(\"data-src\"))}}if(\"step-policy\"===t){var a=this.getWidgetById(this.openWidgetId),p=this.getMtrCustom(a);p=this.setMtrCustomSessionProperty(p,\"pp_read_title\",document.title),p=this.setMtrCustomSessionProperty(p,\"pp_read_url\",window.location),this.setMtrCustom(p),this.mtr.goal(this.eventPrefix+\"Read Privacy Policy\")}}},WidgetScript.prototype.read=function(){var widgetId=this.openWidgetId;this.close();var widgetState=this.widgetStateService.get(widgetId);widgetState&&widgetState.onReadCallback&&eval(widgetState.onReadCallback)},WidgetScript.prototype.logConsent=function(t,e,i){void 0===i&&(i=!0);var n=this.settings.widgets[0].id,o=this.getWidgetById(n),s=this.getMtrCustom(o);this.setMtrCustomSessionProperty(s,\"pp_current_url\",window.location),this.setMtrCustomSessionProperty(s,\"pp_title\",t),this.setMtrCustomSessionProperty(s,\"pp_text\",e),this.setMtrCustom(s);var r=\"Gave consent\";i?this.mtr.goal(r):(s.goal={name:r},this.setMtrCustom(s))},WidgetScript.prototype.approve=function(t,e){this.logConsent(t,e,!0)},WidgetScript.prototype.getMtrCustom=function(t){var e=window.mtr_custom||{};e.session=e.session||{};var i=this.getTranslation(t);return this.setMtrCustomSessionProperty(e,\"pp_url\",i.privacyPolicyUrl),this.setMtrCustomSessionProperty(e,\"pp_version_date\",t.versionDate),this.setMtrCustomSessionProperty(e,\"pp_revision_number\",t.revisionNumber),e},WidgetScript.prototype.setMtrCustomSessionProperty=function(t,e,i){return i&&(t.session[e]=i),t},WidgetScript.prototype.setMtrCustom=function(t){window.mtr_custom=t},WidgetScript.prototype.getWidgetById=function(t){for(var e=0;e<this.settings.widgets.length;e++){var i=this.settings.widgets[e];if(i.id===t)return i}return null},WidgetScript.prototype.markAsClosed=function(t,e){this.utilities.setCookie(this.getClosedWidgetCookieName(this.settings.siteId,t),!0,730),e&&(this.openWidgetId=void 0)},WidgetScript.prototype.markAsCancelled=function(t){this.utilities.setCookie(this.getCancelledWidgetCookieName(this.settings.siteId,t),!0,7),this.openWidgetId=void 0},WidgetScript.prototype.isWidgetClosed=function(t){return 0<this.utilities.getCookie(this.getClosedWidgetCookieName(this.settings.siteId,t)).length||0<this.utilities.getCookie(this.getCancelledWidgetCookieName(this.settings.siteId,t)).length},WidgetScript}();MtrConsent.WidgetScript=WidgetScript}(MtrConsent=MtrConsent||{}),!window.mtr_consent_disable){window.mtr_consent=new MtrConsent.WidgetScript(window.mtr_consent_settings);var utilities=new MtrConsent.Utilities;utilities.triggerEvent(\"onConsentInitialized\")}window.triggerbee = window.triggerbee || {}; window.triggerbee.widgets = {};\r\nwindow.triggerbee.widgets.configurations = [{\"id\":313,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/313.html\",\"triggers\":[{\"type\":\"Instantly\"}]},{\"id\":358,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/358.html\",\"triggers\":[]},{\"id\":436,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/436.html\",\"triggers\":[]},{\"id\":510,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/510.html\",\"triggers\":[{\"type\":\"AfterXPageviews\",\"value\":\"2\"}]},{\"id\":512,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/512.html\",\"triggers\":[{\"type\":\"AfterXSeconds\",\"value\":\"10\"}]},{\"id\":536,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/536.html\",\"triggers\":[{\"type\":\"ExitIntent\"}]},{\"id\":594,\"contentUrl\":\"https://devwidgetsstorage.blob.core.windows.net/content/132710/594.html\",\"triggers\":[{\"type\":\"AfterXPageviews\",\"value\":\"2\"}],\"conditions\":[{\"type\":\"IdentifiedUser\",\"show\":false}]}];\r\nwindow.triggerbee.widgets.previewUrl = \"https://devwidgetsstorage.blob.core.windows.net/content/132710/{widgetId}-preview.html\";\r\nvar Triggerbee,__decorate=this&&this.__decorate||function(e,t,i,r){var n,s=arguments.length,o=s<3?t:null===r?r=Object.getOwnPropertyDescriptor(t,i):r;if(\"object\"==typeof Reflect&&\"function\"==typeof Reflect.decorate)o=Reflect.decorate(e,t,i,r);else for(var g=e.length-1;g>=0;g--)(n=e[g])&&(o=(s<3?n(o):s>3?n(t,i,o):n(t,i))||o);return s>3&&o&&Object.defineProperty(t,i,o),o};!function(e){!function(e){!function(e){e.CustomElement=function(e){const t=()=>{};return function(i){(e=>{if(e.indexOf(\"-\")<=0)throw new Error(\"You need at least 1 dash in the custom element name!\")})(e.selector);const r=document.createElement(\"template\");e.style&&(e.template=`<style>${e.style}</style> ${e.template}`),r.innerHTML=e.template;const n=i.prototype.connectedCallback||t,s=i.prototype.disconnectedCallback||t;i.prototype.connectedCallback=function(){const t=document.importNode(r.content,!0);e.useShadow?this.attachShadow({mode:\"open\"}).appendChild(t):this.appendChild(t),this.componentWillMount&&this.componentWillMount(),n.call(this),this.componentDidMount&&this.componentDidMount()},i.prototype.disconnectedCallback=function(){this.componentWillUnmount&&this.componentWillUnmount(),s.call(this),this.componentDidUnmount&&this.componentDidUnmount()},window.customElements.define(e.selector,i)}}}(e.WebComponents||(e.WebComponents={}))}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.EmptyLogger=class{debug(e){}info(e){}warn(e){}error(e){}};e.ConsoleLogger=class{debug(e){console.debug(e)}info(e){console.log(e)}warn(e){console.warn(e)}error(e){console.error(e)}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.VisitorState=class{};e.VisitorStateService=class{constructor(e,t){this.logger=e,this.utilities=t}getIdentifier(){return\"triggerbee_widgets_state\"}getCurrentState(){const e=this.utilities.getCookie(this.getIdentifier())||\"{}\";return JSON.parse(e)}increasePageViews(){const e=this.getCurrentState();e.pageviews||(e.pageviews=0),e.pageviews=e.pageviews+1,this.setCurrentState(e)}setCurrentState(e){const t=JSON.stringify(e),i=this.utilities.setCookie(this.getIdentifier(),t);this.logger.debug(i)}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.TrackerService=class{constructor(e,t,i){this.logger=e,this.mtr=t,this.widgetPreviewService=i}logWidgetOpened(e,t){this.logWidgetEvent(\"open\",e,t)}logWidgetClosed(e,t){this.logWidgetEvent(\"dismissal\",e,t)}logClickThrough(e,t){this.logWidgetEvent(\"clickthrough\",e,t)}logConversion(e,t){this.logWidgetEvent(\"conversion\",e,t)}logWidgetEvent(e,t,i){this.widgetPreviewService.isPreview()?(this.logger.debug(`Widget-event '${e}' NOT logged to tracker for widget '${t}' because this is preview`),i()):this.mtr.widget(e,t.toString(),i)}setCustomData(e){const t=window.mtr_custom||{};t.session||(t.session={});for(let i in e)t.session[i]=e[i];window.mtr_custom=t}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.Tracker=class{constructor(e){this.logger=e}getTrackerInstance(){return window.mtr}goal(e,t,i){this.getTrackerInstance().goal(e,i,t)}widget(e,t,i){this.logToTracker(()=>{this.getTrackerInstance().widget(e,t,i)})}logToTracker(e){void 0===this.getTrackerInstance()?(this.logger.debug(\"Tracker not initialized yet, adding event listener and logging in callback\"),document.addEventListener&&document.addEventListener(\"afterTriggerbeeReady\",function(){e()})):e()}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.Utilities=class{constructor(){this.getQueryStringValue=function(e){e=e.replace(/[\\[]/,\"\\\\[\").replace(/[\\]]/,\"\\\\]\");var t=new RegExp(\"[\\\\?&]\"+e+\"=([^&#]*)\").exec(location.search);return null==t?\"\":decodeURIComponent(t[1].replace(/\\+/g,\" \"))}}toDate(e){return new Date(e)}toUnix(e){return e.valueOf()}getCookie(e){for(var t=document.cookie.split(\";\"),i=0,r=t.length;i<r;i++)if(t[i].match(new RegExp(\"\\\\b\"+e+\"=\")))return decodeURIComponent(t[i].split(e+\"=\")[1]);return\"\"}setCookie(e,t,i){var r=\"\";if(i){var n=new Date,s=n.getTime();s+=3600*i*1e3,n.setTime(s),r=\"expires=\"+n.toUTCString()+\";\"}var o=e+\"=\"+t+\";\"+r+\"path=/;domain=.\"+location.hostname.replace(/^www\\./i,\"\")+\";\";return document.cookie=o,o}getCurrentSiteId(){return window.mtr_site_id}isDebugMode(){return\"\"!==this.getCookie(\"triggerbee_widgets_debug\")}httpGet(e,t){var i=this.getXMLHttpRequest();i.open(\"GET\",e,!0),i.onreadystatechange=function(){4==i.readyState&&200==i.status&&t(i.responseText)},i.send()}getXMLHttpRequest(){return XMLHttpRequest?new XMLHttpRequest:new ActiveXObject(\"MSXML2.XMLHTTP.3.0\")}eventListener(e,t,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent(\"on\"+t,()=>i.call(e,window.event))}triggerEvent(e,t){if(document.createEvent){var i=document.createEvent(\"Events\");i.detail=t,i.initEvent(e,!0,!0),document.dispatchEvent(i)}}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){!function(t){var i;let r=i=class extends HTMLElement{constructor(){super(),this.utilities=new e.Utilities;const t=this.utilities.isDebugMode()?new e.ConsoleLogger:new e.EmptyLogger;this.widgetsService=new e.WidgetService(t,new e.WidgetsCloseService(t,this.utilities,new e.WidgetPreviewService),new e.WidgetConditionsService(t))}connectedCallback(){this.init()}init(){const e=Number(this.getAttribute(\"data-id\"));let t=this.widgetsService.getWidgetbyId(e);t&&this.showWidget(t)}showWidget(e){var t=this;this.utilities.httpGet(e.contentUrl,function(e){let i=e;var r=document.createElement(\"div\");r.innerHTML=i,t.shadowRoot.appendChild(r)})}};r.selector=\"triggerbee-widget\",r=i=__decorate([t.CustomElement({selector:i.selector,template:\"\",style:\"\",useShadow:!0})],r),t.TriggerbeeWidgetElement=r}(e.WebComponents||(e.WebComponents={}))}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(t){t.WidgetDisplaySettingsService=class{constructor(e,t){this.logger=e,this.visitorStateService=t}checkTriggers(i){let r=i.triggers;if(!r||0===r.length)return this.logger.warn(`Widget '${i.id}': No trigger found`),[];const n=[];for(let s of r)switch(s.type){case e.Widgets.WidgetTriggerType.Instantly:n.push(new t.DefaultWidgetOpener);break;case e.Widgets.WidgetTriggerType.AfterXPageviews:n.push(new t.PageviewsWidgetOpener(this.logger,this.visitorStateService,s,i));break;case e.Widgets.WidgetTriggerType.AfterXSeconds:n.push(new t.DelayedBySecondsWidgetOpener(s));break;case e.Widgets.WidgetTriggerType.ExitIntent:n.push(new t.OnExitIntentWidgetOpener(s));break;case e.Widgets.WidgetTriggerType.Scroll:n.push(new t.OnScrollWidgetOpener(s))}return n}checkUrlSettings(e){return!e.urlSettings||!!this.currentPathMatchesAny(e,e.urlSettings.includePaths,!0)&&!!this.currentPathMatchesAny(e,e.urlSettings.excludePaths,!1)}currentPathMatchesAny(e,t,i){if(!t||0===t.length)return!0;const r=this.removeEventualTrailingSlash(window.location.pathname).toLowerCase();for(var n=0;n<t.length;n++){let s=t[n];if(r==this.removeEventualTrailingSlash(s).toLowerCase())return i?(this.logger.debug(`Widget '${e.id}': Current path '${r}' equals one of included paths '${t.toString()}'`),!0):(this.logger.debug(`Widget '${e.id}': Current path '${r}' equals any of the excluded paths '${t.toString()}'`),!1)}return i?(this.logger.debug(`Widget '${e.id}': Current path '${r}' does NOT equal one of included paths '${t.toString()}'`),!1):(this.logger.debug(`Widget '${e.id}': Current path '${r}' does NOT equal any of the excluded paths '${t.toString()}'`),!0)}removeEventualTrailingSlash(e){return e.endsWith(\"/\")&&(e=e.substring(0,e.length-1)),e}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){class t{constructor(e){this.trigger=e}}e.DefaultWidgetOpener=class extends t{onBeforeOpen(e){}};e.PageviewsWidgetOpener=class extends t{constructor(e,t,i,r){super(i),this.logger=e,this.visitorStateService=t,this.widget=r}onBeforeOpen(e){let t=this.visitorStateService.getCurrentState();this.checkPageviews(this.widget,t,this.trigger)&&e()}checkPageviews(e,t,i){return t.pageviews>=i.value||(this.logger.debug(`Widget '${e.id}': Pageviews trigger not completed. Expected: ${i.value}. Actual: ${t.pageviews}`),!1)}};e.DelayedBySecondsWidgetOpener=class extends t{onBeforeOpen(e){const t=1e3*this.trigger.value;setTimeout(function(){e()},t)}};e.OnExitIntentWidgetOpener=class extends t{constructor(e){super(e)}onBeforeOpen(e){document.addEventListener(\"keydown\",function(t){t.stopPropagation(),(t.ctrlKey&&(\"e\"==t.key||\"k\"==t.key||\"l\"==t.key)||t.altKey&&\"d\"==t.key||\"F6\"==t.key)&&e()}),window.addEventListener(\"mouseout\",function(t){t.clientY<=0&&e()})}};e.OnScrollWidgetOpener=class extends t{onBeforeOpen(e){let t=this.trigger.value;document.addEventListener(\"scroll\",function(i){let r=document.documentElement,n=document.body;Math.round((r.scrollTop||n.scrollTop((r.scrollHeight||n.scrollHeight)-r.clientHeight)*100)>=t&&e()})}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.WidgetPreviewService=class{isPreview(){return!!this.getWidgetPreviewParameterValue()}getWidgetPreviewParameterValue(){return new URLSearchParams(window.location.search).get(\"tb-widget-preview\")}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(t){t.WidgetService=class{constructor(t,i,r){this.logger=t,this.widgetsCloseService=i,this.widgetConditionsService=r,this.widgetElementSelector=e.Widgets.WebComponents.TriggerbeeWidgetElement.selector}appendWidgetHtml(e){var t=document.createElement(this.widgetElementSelector);t.setAttribute(\"data-id\",e.id.toString()),document.body.appendChild(t)}shouldOpenWidget(e){const t=null!=this.getWidgetElementById(e.id),i=this.widgetsCloseService.isClosed(e.id),r=this.widgetConditionsService.checkConditions(e);return!t&&!i&&r}removeWidgetHtml(e){const t=this.getWidgetElementById(e);return t?(t.remove(),!0):(this.logger.warn(`No widget found by ID: \"${e}\"`),!1)}getConfiguredWidgets(){return window.triggerbee.widgets.configurations}configureWidgets(e){window.triggerbee.widgets.configurations=e}getWidgetbyId(e){return this.getConfiguredWidgets().find(t=>t.id==e)}getWidgetElementById(e){return document.querySelector(`${this.widgetElementSelector}[data-id=\"${e}\"]`)}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){let t,i;e.Widget=class{},function(e){e.Instantly=\"Instantly\",e.AfterXPageviews=\"AfterXPageviews\",e.AfterXSeconds=\"AfterXSeconds\",e.ExitIntent=\"ExitIntent\",e.Scroll=\"Scroll\"}(t=e.WidgetTriggerType||(e.WidgetTriggerType={}));e.Trigger=class{};e.UrlSettings=class{},function(e){e.IdentifiedUser=\"IdentifiedUser\",e.QueryParam=\"QueryParam\",e.Device=\"Device\",e.Cookie=\"Cookie\"}(i=e.WidgetConditionType||(e.WidgetConditionType={}));e.Condition=class{}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){class t{constructor(e){this.id=e}}e.WidgetClosed=t;e.WidgetsCloseService=class{constructor(e,t,i){this.logger=e,this.utilities=t,this.widgetPreviewService=i,this.cookieName=\"triggerbee_widgets_closed\"}markAsClosed(e){if(this.widgetPreviewService.isPreview())this.logger.debug(`Widget '${e}' NOT marked as closed because this is preview`);else{let n=this.getClosedWidgets();var i=n.filter(t=>t.id==e)[0];if(i){let t=n.findIndex(t=>t.id==e);n.splice(t,1)}else i=new t(e);var r=new Date;r.setFullYear(r.getFullYear()+1),i.expires=this.utilities.toUnix(r),n.push(i);const s=8760,o=this.utilities.setCookie(this.cookieName,JSON.stringify(n),s);this.logger.debug(o)}}isClosed(e){var t=this.getClosedWidgets().filter(t=>t.id==e)[0];return!!t&&(!!(t.expires>this.utilities.toUnix(new Date))&&(this.logger.debug(`Widget '${e}' is closed and will therefore NOT be shown`),!0))}getClosedWidgets(){return JSON.parse(this.utilities.getCookie(this.cookieName)||\"[]\")}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(t){t.WidgetConditionsService=class{constructor(e){this._logger=e}checkConditions(e){let t=this.getConditionalOpeners(e);return this.checkWithOpeners(t)}getConditionalOpeners(i){let r=i.conditions;if(!r||0==r.length)return this._logger.warn(`Widget '${i.id}': No conditions found`),[];let n=[];for(let i of r)switch(i.type){case e.Widgets.WidgetConditionType.IdentifiedUser:n.push(new t.VisitorIdentifiedConditionChecker);break;case e.Widgets.WidgetConditionType.QueryParam:n.push(new t.QueryParameterConditionChecker(i))}return n}checkWithOpeners(e){let t=!0;for(let i of e)t=t&&i.canBeOpened();return t}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),function(e){!function(e){e.WidgetApi=class{constructor(){this.utilities=new e.Utilities,this.logger=this.utilities.isDebugMode()?new e.ConsoleLogger:new e.EmptyLogger,this.mtr=new e.Tracker(this.logger),this.visitorStateService=new e.VisitorStateService(this.logger,this.utilities),this.widgetPreviewService=new e.WidgetPreviewService,this.widgetsCloseService=new e.WidgetsCloseService(this.logger,this.utilities,this.widgetPreviewService),this.widgetDisplaySettingsService=new e.WidgetDisplaySettingsService(this.logger,this.visitorStateService),this.widgetService=new e.WidgetService(this.logger,this.widgetsCloseService,new e.WidgetConditionsService(this.logger)),this.trackerService=new e.TrackerService(this.logger,this.mtr,this.widgetPreviewService)}init(){if(this.widgetPreviewService.isPreview()){const i=this.widgetPreviewService.getWidgetPreviewParameterValue(),r=window.triggerbee.widgets.previewUrl+\"?v=\"+Math.floor(999*Math.random());var t=new e.Widget;t.id=+i,t.contentUrl=r.replace(\"{widgetId}\",i),this.logger.debug(`Previewing widget ${t.id}. Content URL: ${t.contentUrl}`),this.widgetService.configureWidgets([t]),this.widgetService.appendWidgetHtml(t)}else{const t=this.widgetService.getConfiguredWidgets();if(t.length>0){this.visitorStateService.increasePageViews();for(let i of t){if(!this.widgetDisplaySettingsService.checkUrlSettings(i))continue;let t=this.widgetDisplaySettingsService.checkTriggers(i);if(!(t.length<1))for(let r of t){if(r instanceof e.DefaultWidgetOpener){this.widgetService.shouldOpenWidget(i)&&(this.widgetService.appendWidgetHtml(i),this.trackerService.logWidgetOpened(i.id));break}r.trigger&&this.logger.debug(`Widget '${i.id}' will be opened. Trigger: '${r.trigger.type}'. Value: '${r.trigger.value}'`),r.onBeforeOpen(()=>{this.widgetService.shouldOpenWidget(i)&&(this.widgetService.appendWidgetHtml(i),this.trackerService.logWidgetOpened(i.id))})}}}}}open(e){const t=this.widgetService.getWidgetbyId(e);t?(this.widgetService.appendWidgetHtml(t),this.trackerService.logWidgetOpened(e)):this.logger.warn(`No widget found by ID: \"${e}\"`)}close(e){this.widgetsCloseService.markAsClosed(e),this.widgetService.removeWidgetHtml(e)&&this.trackerService.logWidgetClosed(e)}redirect(e,t){this.openUrlInternal(e,()=>{window.location=t,this.widgetsCloseService.markAsClosed(e),this.widgetService.removeWidgetHtml(e)})}openInNewTab(e,t){this.openUrlInternal(e,()=>{window.open(t,\"_blank\"),this.widgetsCloseService.markAsClosed(e),this.widgetService.removeWidgetHtml(e)})}openUrlInternal(e,t){var i=this;this.mtr.goal(`oc_click_${e}`,function(){i.trackerService.logClickThrough(e,function(){t()})})}submit(e,t,i){e.preventDefault();let r={};const n=t.getElementsByTagName(\"input\");for(let e of n)r[e.getAttribute(\"name\")]=e.value;this.trackerService.setCustomData(r);var s=this;this.mtr.goal(`oc_submit_${i}`,function(){s.trackerService.logConversion(i,function(){s.widgetsCloseService.markAsClosed(i),s.widgetService.removeWidgetHtml(i)})})}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={})),window.triggerbee.widgets.api=new Triggerbee.Widgets.WidgetApi,function(e){!function(e){e.VisitorIdentifiedConditionChecker=class{canBeOpened(){return!1}};e.QueryParameterConditionChecker=class{constructor(e){this.condition=e}canBeOpened(){let e=new URLSearchParams(window.location.search),t=this.condition.value.split(\"=\"),i=t[0],r=t[1];return this.condition.show?this.hasParamValue(e,i,r):!this.hasParamValue(e,i,r)}hasParamValue(e,t,i){return!!e.has(t)&&e.get(t)==i}}}(e.Widgets||(e.Widgets={}))}(Triggerbee||(Triggerbee={}));;\r\nwindow.triggerbee.widgets.api.init();",
       "pre_trackingscript": null,
       "is_engage": false,
-      "has_consent": true,
+      "has_consent": false,
       "paused": false,
       "expired": false,
       "expireDate": null,
@@ -4729,6 +4736,7 @@
       "apiKeys": []
     },
     {
+      "id": 674803,
       "account_id": "8289945",
       "account_number": "8289945",
       "site_id": "674803",
@@ -5063,6 +5071,7 @@
       "apiKeys": []
     },
     {
+      "id": 890918,
       "account_id": "8785099",
       "account_number": "8785099",
       "site_id": "890918",
@@ -5245,6 +5254,7 @@
       ]
     },
     {
+      "id": 411988,
       "account_id": "9004963",
       "account_number": "9004963",
       "site_id": "411988",
@@ -5337,6 +5347,7 @@
       "apiKeys": []
     },
     {
+      "id": 754605,
       "account_id": "9113677",
       "account_number": "9113677",
       "site_id": "754605",
@@ -5356,7 +5367,7 @@
       "pre_trackingscript": null,
       "is_engage": false,
       "has_consent": false,
-      "paused": false,
+      "paused": true,
       "expired": false,
       "expireDate": null,
       "scheduledRemoval": null,
@@ -5421,6 +5432,7 @@
       "apiKeys": []
     },
     {
+      "id": 473296,
       "account_id": "9387244",
       "account_number": "9387244",
       "site_id": "473296",
@@ -5540,6 +5552,7 @@
       "apiKeys": []
     },
     {
+      "id": 293740,
       "account_id": "9544388",
       "account_number": "9544388",
       "site_id": "293740",
@@ -5715,6 +5728,7 @@
       "apiKeys": []
     },
     {
+      "id": 722237,
       "account_id": "978350",
       "account_number": "978350",
       "site_id": "722237",
@@ -5855,6 +5869,7 @@
       "apiKeys": []
     },
     {
+      "id": 650936,
       "account_id": "2782595",
       "account_number": "2782595",
       "site_id": "650936",
@@ -5890,6 +5905,7 @@
       ]
     },
     {
+      "id": 968315,
       "account_id": "4183228",
       "account_number": "4183228",
       "site_id": "968315",
@@ -5909,7 +5925,7 @@
       "pre_trackingscript": null,
       "is_engage": false,
       "has_consent": true,
-      "paused": false,
+      "paused": true,
       "expired": false,
       "expireDate": null,
       "scheduledRemoval": null,
@@ -5960,6 +5976,7 @@
       ]
     },
     {
+      "id": 651758,
       "account_id": "7287523",
       "account_number": "7287523",
       "site_id": "651758",
@@ -5988,6 +6005,7 @@
       "apiKeys": []
     },
     {
+      "id": 473403,
       "account_id": "9970116",
       "account_number": "9970116",
       "site_id": "473403",

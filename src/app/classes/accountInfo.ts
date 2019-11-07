@@ -1,4 +1,5 @@
 export class AccountInfo{
+      id: number;
       account_id: string;
       account_number: string;
       site_id: string;

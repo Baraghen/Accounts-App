@@ -21,7 +21,7 @@ import { FilterValues } from '../../classes/filterValues';
 })
 export class AccountsComponent implements OnInit{
 
-  constructor(private accountDataService: AccountDataService, private router: Router, private changeDetector: ChangeDetectorRef) { }
+  constructor(private accountDataService: AccountDataService, private router: Router) { }
 
   columnsToDisplay: string[] = ['id', 'name', 'isEngage', 'isExpired', 'areWidgetsActivated', 'group', 'has_consent', 'paused', 'expireDate', 'scheduledRemoval'];
  
@@ -115,6 +115,18 @@ export class AccountsComponent implements OnInit{
         });
   }
 
+
+  updateAccount(account: Account){
+    console.log(account);
+    this.accountDataService.updateAccount(account).subscribe();
+  }
+
+  updateAccountInfo(account: AccountInfo){
+    console.log(account);
+    this.accountDataService.updateAccountInfo(account).subscribe();
+  }
+
+
   hide = true;
   
   toggleForm(){
@@ -135,6 +147,7 @@ export class AccountsComponent implements OnInit{
     this.tableFilter();
 
     }
+
 
 
     

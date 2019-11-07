@@ -4,6 +4,11 @@ import { MatPaginator } from '@angular/material';
 import { AccountDataService } from '../../services/account-data.service';
 import { FilterValues } from '../../classes/filterValues';
 import { ActivatedRoute } from '@angular/router';
+import { Account } from '../../classes/account';
+import { AccountInfo } from '../../classes/accountInfo';
+import { FullAccount } from '../../classes/fullAccount';
+
+
 
 @Component({
   selector: 'app-selected-group-page',
@@ -14,7 +19,7 @@ export class SelectedGroupPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private _data: AccountDataService) { }
 
-  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   title: string;
 
@@ -24,32 +29,57 @@ export class SelectedGroupPageComponent implements OnInit {
 
   routeData;
 
-  getData(params?:FilterValues) {
-    this._data.getAllAccountData(params).subscribe(
-      data => {
-        let objFinal = [Object.assign(data[0][0], data[1][0])]
-        this.dataSource = new MatTableDataSource(objFinal);
-        this.dataSource.paginator = this.paginator;
-      }
-    )
+  accountList: Account[];
+  accountInfoList: AccountInfo[];
+
+  getData(params?:FilterValues){
+
+    let specAcc = new FullAccount;
+    let arr = [];
+    //The properties in the table is the same for every URL because the urls doesnt have their own.
+    this._data.getAllAccountData(params).subscribe(data => {
+      
+      this.accountList = data[0];
+      this.accountInfoList = data[1];
+      
+      this.accountInfoList.forEach( info => {
+        if (this.accountList[0].id == info.id) {
+          specAcc.account = this.accountList[0];
+          specAcc.accountInfo = info;
+          
+          specAcc.accountInfo.urls.forEach(url => {
+            let objFinal = {
+              url: [],
+              fullAccount: specAcc
+            }
+            objFinal.url.push(url);
+            arr.push(objFinal);
+          })
+        }
+      })
+      this.dataSource = new MatTableDataSource(arr);
+      this.dataSource.paginator = this.paginator;
+    })
   }
+
+  updateAccount(account: Account){
+    console.log(account);
+    this._data.updateAccount(account).subscribe();
+  }
+
 
   ngOnInit() {
 
-    let id = parseInt(this.route.snapshot.paramMap.get('id'));
+    let id = this.route.snapshot.paramMap.get('id')
 
     let filterValues:FilterValues = {
       account: {
-        id: id
+        groupName: id
       },
-      info: {
-        site_id: id
-      } 
+      info: {}
     }
-    this.getData(filterValues)
     
-    //changes route data
-    let nameID = this.route.snapshot.paramMap.get('id');
-    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].param = nameID);
+    this.getData(filterValues)
+    this.routeData = this.route.data.subscribe(route => route.breadCrumb[2].param = id);
   }
 }

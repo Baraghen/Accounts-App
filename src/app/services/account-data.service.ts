@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, forkJoin } from 'rxjs';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Account } from '../classes/account';
 import { AccountInfo } from '../classes/accountInfo';
+import { FullAccount } from '../classes/fullAccount';
 import { FilterValues } from '../classes/filterValues';
 
 @Injectable({
@@ -66,8 +67,10 @@ export class AccountDataService {
           if (keyName == 'groupName') {
             keyName = 'group.name';
             paramsAcc = paramsAcc.append(keyName, value); 
+            
           } else{
             paramsAcc = paramsAcc.append(keyName, value);
+            
           }
         }
       })
@@ -92,5 +95,21 @@ export class AccountDataService {
     }
 
   }
-}
 
+  updateAccount(account: Account):Observable<Account>{
+    let urlFix = account.id;
+    const HttpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.httpClient.put<Account>(`${this.accountUrl}/${urlFix}`, account, HttpOptions);
+  }
+
+  updateAccountInfo(account: AccountInfo):Observable<AccountInfo>{
+    let urlFix = account.id;
+    const HttpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.httpClient.put<AccountInfo>(`${this.infoUrl}/${urlFix}`, account, HttpOptions);
+  }
+
+}

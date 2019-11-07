@@ -29,17 +29,17 @@
         
             <ng-container matColumnDef="isEngage">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">isEngage</th>
-                <td mat-cell *matCellDef="let fullAccount"> {{fullAccount.account.isEngage}} </td>
+                <td mat-cell *matCellDef="let fullAccount"> <mat-slide-toggle (change)="updateAccount(fullAccount.account)" [checked]='fullAccount.account.isEngage' [(ngModel)]="fullAccount.account.isEngage"></mat-slide-toggle></td>
             </ng-container>
     
             <ng-container matColumnDef="isExpired">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">isExpired</th>
-                <td mat-cell *matCellDef="let fullAccount"> {{fullAccount.account.isExpired}} </td>
+                <td mat-cell *matCellDef="let fullAccount"><mat-slide-toggle (change)="updateAccount(fullAccount.account)" [checked]='fullAccount.account.isExpired' [(ngModel)]="fullAccount.account.isExpired"></mat-slide-toggle></td>
             </ng-container>
     
             <ng-container matColumnDef="areWidgetsActivated">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">areWidgetsActivated</th>
-                <td mat-cell *matCellDef="let fullAccount"> {{fullAccount.account.areWidgetsActivated}} </td>
+                <td mat-cell *matCellDef="let fullAccount"><mat-slide-toggle (change)="updateAccount(fullAccount.account)" [checked]='fullAccount.account.areWidgetsActivated' [(ngModel)]="fullAccount.account.areWidgetsActivated"></mat-slide-toggle></td>
             </ng-container>
     
             <ng-container matColumnDef="group">
@@ -49,12 +49,12 @@
 
             <ng-container matColumnDef="has_consent">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">has_consent</th>
-                <td mat-cell *matCellDef="let fullAccount">{{fullAccount.accountInfo.has_consent}}</td>
+                <td mat-cell *matCellDef="let fullAccount"><mat-slide-toggle (change)="updateAccountInfo(fullAccount.accountInfo)" [checked]='fullAccount.accountInfo.has_consent' [(ngModel)]="fullAccount.accountInfo.has_consent"></mat-slide-toggle></td>
             </ng-container>
 
             <ng-container matColumnDef="paused">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">paused</th>
-                <td mat-cell *matCellDef="let fullAccount">{{fullAccount.accountInfo.paused}}</td>
+                <td mat-cell *matCellDef="let fullAccount"><mat-slide-toggle (change)="updateAccountInfo(fullAccount.accountInfo)" [checked]='fullAccount.accountInfo.paused' [(ngModel)]="fullAccount.accountInfo.paused"></mat-slide-toggle></td>
             </ng-container>
 
             <ng-container matColumnDef="expireDate">
@@ -72,7 +72,7 @@
             
         </table>
 
-        <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        <mat-paginator [pageSize]="25" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     
 </div>
 

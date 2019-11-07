@@ -5,6 +5,7 @@ export class Account{
     isEngage: boolean;
     isExpired: boolean;
     areWidgetsActivated: boolean;
+    activeCampaigns: boolean;
     group: {
         id: string;
         name: string;
